@@ -1,0 +1,110 @@
+.buttons--centered {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.button {
+	display: block;
+	font-family: "Montserrat", "Arial", "Helvetica", sans-serif;
+	border: 1px solid transparent;
+	border-radius: 8px;
+	padding-top: 17px;
+	padding-right: 18px;
+	padding-bottom: 17px;
+	padding-left: 18px;
+	font-weight: 500;
+	text-align: center;
+	text-transform: uppercase;
+	max-width: 370px;
+	width: 100%;
+	transition: .3s all ease-in;
+}
+.button--primary {
+	font-weight: 700;
+	background-color: #D5BE7C;
+	background-image: radial-gradient(50% 50% at 50% 50%, #DCC688 0%, #D5BE7C 100%);
+	box-shadow: 0px 4px 0px #A8976B;
+	font-size: 15px;
+	padding-top: 26px;
+	padding-bottom: 26px;
+	transition: .3s all ease-in;
+	&:hover {
+		transform: translateY(4px);
+		box-shadow: none;
+		background: radial-gradient(50% 50% at 50% 50%, #DCC172 0%, #D5B866 100%);
+	}
+}
+.button--secondary {
+	font-weight: 500;
+	border-color: #d1c297;
+	font-size: 12px;
+	line-height: 15px;
+	letter-spacing: 0.05em;
+	color: #d1c297;
+}
+.button--secondary:hover {
+	background-color: #d1c297;
+	color: #fff;
+	transition: .3s all ease-out;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+	width: 45px;
+	height: 45px;
+	border-radius: 100%;
+	background: radial-gradient(50% 50% at 50% 50%, #C6B480 0%, #D1C297 100%);
+	transition: .3s all ease-in;
+	&:hover {
+		transform: scale(1.15);
+	}
+}
+.swiper-button-next:after,
+.swiper-button-prev:after {
+	display: block;
+	width: 15px;
+	height: 15px;
+	font-size: 0;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: contain;
+}
+.swiper-button-prev:after {
+	background-image: url(../img/general/slider-angle-left.svg);
+}
+.swiper-button-next:after {
+	background-image: url(../img/general/slider-angle-left.svg);
+	transform: scaleX(-1);
+}
+
+.input {
+	padding: 14px 26px;
+	background: linear-gradient(315deg, rgba(0, 0, 0, 0.6) 0%, rgba(255, 255, 255, 0) 100%), #F0F1F5;
+	background-blend-mode: soft-light, normal;
+	box-shadow: inset -1.87227px -1.87227px 1.87227px rgba(255, 255, 255, 0.7), inset 2.8084px 2.8084px 1.87227px rgba(174, 174, 192, 0.2);
+	border-radius: 7.48907px;
+	width: 100%;
+}
+
+.privacy {
+	margin-left: auto;
+	margin-right: auto;
+	max-width: 407px;
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 140%;
+	text-align: center;
+	color: #B8B8B8;
+}
+.privacy__policy {
+	border-bottom: 1px solid #D1C297;
+	color: #D1C297;
+}
+
+.poppa__closer {
+	font-weight: 400;
+	font-family: "Montserrat", "Arial", "Helvetica", sans-serif;
+	background-color: rgba(255, 255, 255, .1);
+	right: 90px;
+	top: 90px;
+}

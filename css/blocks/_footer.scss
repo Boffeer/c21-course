@@ -1,0 +1,98 @@
+.footer {
+	background: linear-gradient(180deg, #090F12 0%, #0D1316 100%);
+	color: #fff;
+	padding-top: 25px;
+	padding-bottom: 32px;
+	font-size: 12px;
+	line-height: 140%;
+}
+.footer__inner {
+  display: grid;
+	row-gap: 14px;
+  grid-auto-columns: 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 35px 30px 70px auto;
+  grid-template-areas:
+    "branding contacts socials"
+    "product contacts privacy"
+    "organization . ."
+    "disclaimer disclaimer disclaimer";
+}
+.footer-branding__logo {
+	max-width: 150px;
+	width: 100%;
+}
+
+.footer-branding {
+	grid-area: branding;
+}
+.footer__product {
+	grid-area: product;
+	max-width: 280px;
+}
+.footer__organization {
+	grid-area: organization;
+	max-width: 245px;
+	opacity: 0.5;
+}
+
+.footer-contacts {
+	grid-area: contacts;
+	font-size: 16px;
+	line-height: 130%;
+	font-style: normal;
+}
+.footer-contacts__contact {
+	margin-bottom: 12px;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	transition: .3s all ease-in;
+}
+.footer-contacts__contact--tel:hover {
+	color: #D5BE7C;
+}
+.footer-contacts__contact-text {
+	user-select: all;
+	display: block;
+}
+.footer-contacts__contact-icon {
+	margin-right: 12px;
+}
+
+.footer-socials {
+	grid-area: socials;
+	display: flex;
+	justify-content: flex-end;
+}
+.footer-socials-link {
+	margin-right: 12px;
+	transition: .3s all ease-in;
+	&:last-child {
+		margin-right: 0;
+	}
+	&:hover {
+		svg path[fill="white"] {
+			fill: #d5be7c;
+		}
+	}
+}
+.footer-privacy {
+	grid-area: privacy;
+	text-align: right;
+}
+.footer-privacy__policy {
+	display: inline-block;
+	border-bottom: 1px solid #fff;
+	margin-bottom: 10px;
+	transition: .3s all ease-in;
+	&:hover {
+		color: #D5BE7C;
+		border-bottom-color: #D5BE7C;
+	}
+}
+.footer__disclaimer {
+	grid-area: disclaimer;
+	text-align: center;
+	opacity: 0.5;
+}

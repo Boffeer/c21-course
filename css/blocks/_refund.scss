@@ -1,0 +1,38 @@
+.refund {
+	padding-top: 45px;
+	padding-bottom: 55px;
+}
+.refund__inner {
+	background-image: linear-gradient(180deg, #090F12 0%, #131C22 35.42%, #0D1316 100%);
+	border-radius: 120px;
+	padding-top: 76px;
+	padding-right: 100px;
+	padding-bottom: 90px;
+	padding-left: 100px;
+	position: relative;
+}
+.refund__title {
+	font-weight: 700;
+	font-size: 38px;
+	line-height: 140%;
+	letter-spacing: 0.05em;
+	text-transform: uppercase;
+	color: #FFFFFF;
+	margin-bottom: 64px;
+	max-width: 581px;
+}
+.refund__img-wrap {
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	max-width: 599px;
+	display: flex;
+	align-items: flex-end;
+	justify-content: center;
+}
+.refund__img {
+	object-fit: contain;
+	object-position: bottom;
+	width: 100%;
+	height: 100%;
+}

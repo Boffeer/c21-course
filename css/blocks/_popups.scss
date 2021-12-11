@@ -1,0 +1,38 @@
+.popups {
+	display: none;
+}
+.popups-callback {
+	max-width: 592px;
+	padding-bottom: 40px;
+	margin-top: 80px;
+}
+.popups-callback__img {
+	width: 100%;
+	margin-top: -90px;
+	margin-bottom: 45px;
+}
+.popups-callback__title {
+	margin-bottom: 18px;
+	font-weight: 400;
+	font-size: 30px;
+	line-height: 100%;
+	text-align: center;
+	// font-feature-settings: 'ss04' on;
+	color: #000000;
+}
+.popups-callback__form {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	max-width: 350px;
+	margin-left: auto;
+	margin-bottom: 30px;
+	margin-right: auto;
+}
+.popups-callback-form__input-wrap {
+	width: 100%;
+	margin-bottom: 13px;
+	&:last-child {
+		margin-bottom: 20px;
+	}
+}

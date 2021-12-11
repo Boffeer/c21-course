@@ -1,0 +1,117 @@
+.who {
+	position: relative;
+	z-index: 2;
+	margin-top: -140px;
+	padding-top: 85px;
+	padding-bottom: 108px;
+	border-radius: 120px 120px 0 0;
+	background-color: #0e1322;
+	// background-image: url("../img/who/all-bg.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+.who__title {
+	margin-bottom: 41px;
+	font-weight: 700;
+	font-size: 38px;
+	line-height: 140%;
+	letter-spacing: 0.05em;
+	text-align: center;
+	text-transform: uppercase;
+	color: #fff;
+}
+.who-tablist-controls {
+	margin-bottom: 60px;
+	display: grid;
+	grid-auto-rows: auto;
+	grid-template-columns: repeat(3, 1fr);
+	column-gap: 30px;
+	row-gap: 15px;
+}
+.who-tablist-controls__button {
+	font-weight: 400;
+	background: #1e263c;
+	border: 1px solid rgba(255, 255, 255, 0.09);
+	box-sizing: border-box;
+	text-align: center;
+	text-transform: initial;
+	border-radius: 6px;
+	color: #fff;
+	font-size: 16px;
+	line-height: 140%;
+	text-align: center;
+	letter-spacing: 0.05em;
+	&--current {
+		font-weight: 700;
+		color: #11192e;
+		background: #D1C297;
+	}
+}
+.who-tablist-tabs-tab {
+	display: flex;
+	align-items: flex-start;
+	justify-content: center;
+}
+
+.who-tablist-tabs-tab-before,
+.who-tablist-tabs-tab-after {
+	max-width: 456px;
+	color: #fff;
+	margin-left: 35px;
+	margin-right: 35px;
+}
+
+.who-tablist-tabs-tab-before__title {
+	margin-bottom: 22px;
+	font-weight: 400;
+	font-size: 25px;
+	line-height: 100%;
+}
+.who-tablist-tabs-tab-after__title {
+	margin-bottom: 22px;
+	font-weight: 700;
+	font-size: 25px;
+	line-height: 100%;
+}
+.who-tablist-tabs-tab-before-bullets,
+.who-tablist-tabs-tab-after-bullets {
+	padding-left: 40px;
+}
+
+@mixin tab-bullet-common() {
+	content: "";
+	position: absolute;
+	left: -40px;
+	top: 0;
+	display: block;
+	width: 25px;
+	height: 25px;
+	background-size: contain;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+.who-tablist-tabs-tab-before-bullets__bullet {
+	position: relative;
+	margin-bottom: 20px;
+	font-weight: 400;
+	font-size: 18px;
+	line-height: 145%;
+
+	&::before {
+		@include tab-bullet-common();
+		background-image: url("../img/who/no.svg");
+	}
+}
+.who-tablist-tabs-tab-after-bullets__bullet {
+	position: relative;
+	margin-bottom: 20px;
+	font-weight: 600;
+	font-size: 18px;
+	line-height: 145%;
+
+	&::before {
+		@include tab-bullet-common();
+		background-image: url("../img/who/yes.svg");
+	}
+}

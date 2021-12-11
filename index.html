@@ -18,16 +18,17 @@
 
 		<title></title>
 		<link rel="stylesheet" href="./css/normalize.css" />
+		<link rel="stylesheet" href="./css/swiper-bundle.min.css" />
 		<link rel="stylesheet" href="./assets/poppa/poppa.min.css" />
 		<link rel="stylesheet" href="./css/index.min.css" />
 	</head>
 	<body>
 
 		<header class="header">
-			<div class="container">
+			<div class="container container--header">
 				<a href="#" class="header-branding">
-					<img src="./img/general/logo.svg" alt="century21 Россия" class="header-branding__img">
-					<p class="header-branding-desc">Международная академия недвижимости</p>
+					<img data-src="./img/general/logo.svg" alt="century21 Россия" class="header-branding__img lazy">
+					<p class="header-branding__desc">Международная академия недвижимости</p>
 				</a>
 				<nav class="header-nav">
 					<a href="#help" class="header-nav-link">О курсе</a>
@@ -42,54 +43,65 @@
 			</div>
 		</header>
 		<main class="main">
-			<section class="hero">
+			<section class="hero lazy" data-bg="./img/hero/hero-bg.jpg">
 				<div class="container">
 					<div class="hero-offer">
 						<h1 class="hero-offer__title">
-							Постройте своё агентство недвижимости и зарабатывайте
+							Постройте своё <br>
+							агентство недвижимости <br>
+							и зарабатывайте
 							<span class="hero-offer__title--coloring">
-								от 300 000 рублей
-								до 5 млн
+								от&nbsp;300&nbsp;000&nbsp;рублей
+								до&nbsp;5&nbsp;млн
 							</span>
 						</h1>
 						<p class="hero-offer__desc">
-							С&nbsp;помощью курса от&nbsp;экспертов, открывших
-							<span class="hero-offer__bold">&gt;80 агентств по&nbsp;всей России с&nbsp;оборотом более 1&nbsp;млрд рублей</span>
+							С&nbsp;помощью курса от&nbsp;экспертов, <br>
+							открывших
+							<span class="hero-offer__desc--bold">&gt;80 агентств по&nbsp;всей России <br>с&nbsp;оборотом более 1&nbsp;млрд рублей</span>
 						</p>
 					</div>
 				</div>
 				<div class="hero__img-wrap">
-					<img src="./img/hero/hero.png" alt="Постройте своё агентство недвижимости и зарабатывайте от 300 000 рублей до 5 млн" class="hero__img lazy">
+					<img data-src="./img/hero/hero.png" alt="Постройте своё агентство недвижимости и зарабатывайте от 300 000 рублей до 5 млн" class="hero__img lazy">
 				</div>
 				<div class="hero-bullets">
 					<div class="container">
 						<div class="hero-bullets-list">
 							<article class="hero-bullets-list-bullet">
-								<h3 class="hero-bullets-list-bullet__title">7 обучающих модулей</h3>
-								<p class="hero-bullets-list-bullet__desc">для создания агентства недвижимости с нуля </p>
+								<div class="hero-bullets-list-bullet__top">
+									<h3 class="hero-bullets-list-bullet__title">7 обучающих модулей</h3>
+									<p class="hero-bullets-list-bullet__desc">для создания агентства недвижимости с нуля </p>
+								</div>
 								<div class="hero-bullets-list-bullet-icon">
-									<img src="./img/hero/modules.png" alt="7 обучающих модулей" class="hero-bullets-list-bullet-icon__img">
+									<img data-src="./img/hero/modules.png" alt="7 обучающих модулей" class="hero-bullets-list-bullet-icon__img lazy">
 								</div>
 							</article>
 							<article class="hero-bullets-list-bullet">
-								<h3 class="hero-bullets-list-bullet__title">Практические задания</h3>
-								<p class="hero-bullets-list-bullet__desc">с проверкой от экспертов</p>
+								<div class="hero-bullets-list-bullet__top">
+									<h3 class="hero-bullets-list-bullet__title">Практические задания</h3>
+									<p class="hero-bullets-list-bullet__desc">с проверкой от экспертов</p>
+									</div>
 								<div class="hero-bullets-list-bullet-icon">
-									<img src="./img/hero/practice.png" alt="Практические задания " class="hero-bullets-list-bullet-icon__img">
+									<img data-src="./img/hero/practice.png" alt="Практические задания " class="hero-bullets-list-bullet-icon__img lazy">
 								</div>
 							</article>
 							<article class="hero-bullets-list-bullet">
-								<h3 class="hero-bullets-list-bullet__title">Пошаговая схема</h3>
-								<p class="hero-bullets-list-bullet__desc">роста прибыли +300 тысяч в месяц за первый год</p>
+								<div class="hero-bullets-list-bullet__top">
+									<h3 class="hero-bullets-list-bullet__title">Пошаговая схема</h3>
+									<p class="hero-bullets-list-bullet__desc">роста прибыли +300 тысяч в месяц за первый год</p>
+									</div>
 								<div class="hero-bullets-list-bullet-icon">
-									<img src="./img/hero/scheme.png" alt="Пошаговая схема" class="hero-bullets-list-bullet-icon__img">
+									<img data-src="./img/hero/scheme.png" alt="Пошаговая схема" class="hero-bullets-list-bullet-icon__img lazy">
 								</div>
 							</article>
 							<article class="hero-bullets-list-bullet">
-								<h3 class="hero-bullets-list-bullet__title">2 формата обучения</h3>
-								<p class="hero-bullets-list-bullet__desc">как онлайн, так и офлайн </p>
+								<div class="hero-bullets-list-bullet__top">
+									<h3 class="hero-bullets-list-bullet__title">2 формата обучения</h3>
+									<p class="hero-bullets-list-bullet__desc">как онлайн, так и офлайн </p>
+								</div>
 								<div class="hero-bullets-list-bullet-icon">
-									<img src="./img/hero/practice.png" alt="2 формата обучения" class="hero-bullets-list-bullet-icon__img">
+									<img data-src="./img/hero/formats.png" alt="2 формата обучения" class="hero-bullets-list-bullet-icon__img lazy">
 								</div>
 							</article>
 						</div>
@@ -97,8 +109,8 @@
 				</div>
 			</section>
 
-			<section class="help">
-				<div class="container">
+			<section class="help lazy" data-bg="./img/help/help-bg.jpg">
+				<div class="container container--help">
 					<div class="help__text">
 						<h2 class="help__title">А мне поможет этот курс? </h2>
 						<p class="help__desc">
@@ -111,21 +123,23 @@
 							После составления плана останется сделать 1-2-3 и получать деньги.
 						</p>
 					</div>
-					<div class="help__img-wrap"><img src="./img/help/help-char.png" alt="А мне поможет этот курс?" class="help__img"></div>
+					<div class="help__img-wrap">
+						<img data-src="./img/help/help-char.png" alt="А мне поможет этот курс?" class="help__img lazy">
+					</div>
 				</div>
 			</section>
 
-			<section class="who">
+			<section class="who lazy" data-bg="./img/who/all-bg.jpg">
 				<div class="container">
-					<h2 class="who__title section__title section__title--centered"></h2>
+					<h2 class="who__title section__title section__title--centered">кто вы?</h2>
 					<div class="who-tabslist">
 						<div class="who-tablist-controls">
-							<div class="who-tablist-controls__button" data-tab="1">Руководитель отдела продаж</div>
-							<div class="who-tablist-controls__button" data-tab="2">Риелтор</div>
-							<div class="who-tablist-controls__button" data-tab="3">Руководитель АН</div>
-							<div class="who-tablist-controls__button" data-tab="4">Случайный прохожий</div>
-							<div class="who-tablist-controls__button" data-tab="5">Наёмный руководитель</div>
-							<div class="who-tablist-controls__button" data-tab="6">Предприниматель</div>
+							<button class="who-tablist-controls__button" data-tab="1">Руководитель отдела продаж</button>
+							<button class="button who-tablist-controls__button" data-tab="2">Риелтор</button>
+							<button class="button who-tablist-controls__button" data-tab="3">Руководитель АН</button>
+							<button class="button who-tablist-controls__button" data-tab="4">Случайный прохожий</bu>
+							<button class="button who-tablist-controls__button" data-tab="5">Наёмный руководитель</bu>
+							<button class="button who-tablist-controls__button who-tablist-controls__button--current" data-tab="6">Предприниматель</button>
 						</div>
 						<div class="who-tablist-tabs">
 							<article class="who-tablist-tabs-tab">
@@ -168,10 +182,10 @@
 										<li class="who-tablist-tabs-tab-after-bullets__bullet">
 											Отлаженная воронка продаж и набор инструментов
 											для платного и бесплатного продвижения
-											движения к лидерству в регионе
 										</li>
 										<li class="who-tablist-tabs-tab-after-bullets__bullet">
 											Стабильный рост прибыли и понятный путь
+											движения к лидерству в регионе
 										</li>
 									</ul>
 								</div>
@@ -181,10 +195,10 @@
 				</div>
 			</section>
 
-			<section class="results">
-				<div class="container">
+			<section class="results lazy" data-bg="./img/result/result-bg.jpg">
+				<div class="container container--results">
 					<div class="results__img-wrap">
-						<img src="./img/result/result-hero.png" alt="МЫ ПРИВЕДЕМ ВАС К РЕЗУЛЬТАТУ!" class="results__img">
+						<img data-src="./img/result/result-hero.png" alt="МЫ ПРИВЕДЕМ ВАС К РЕЗУЛЬТАТУ!" class="results__img lazy">
 					</div>
 					<div class="results__text">
 						<h2 class="results__title section__title">МЫ ПРИВЕДЕМ ВАС К РЕЗУЛЬТАТУ!</h2>
@@ -207,7 +221,7 @@
 				</div>
 			</section>
 
-			<section class="programm">
+			<section class="programm lazy" data-bg="./img/programm/programm-bg.png">
 				<div class="container">
 					<div class="programm-modules">
 						<article class="programm-modules-module">
@@ -461,14 +475,14 @@
 						<article class="programm-modules-module">
 							<div class="programm-modules-module-top">
 								<h3 class="programm-modules-module-top__title">7 Модуль</h3>
-								<p class="programm-modules-module-top__name">Рабочие инструменты, чтобы зарабатывать  от 300 000 рублей до 3 млн в своём агентстве через 10 месяцев</p>
+								<p class="programm-modules-module-top__name">Рабочие инструменты, чтобы зарабатывать от 300 000 рублей до 3 млн в своём агентстве через 10 месяцев</p>
 								<button class="programm-modules-module-top__button"></button>
 							</div>
 							<div class="programm-modules-module-bottom">
 								<ul class="programm-modules-module-bottom-summary">
 									<li class="programm-modules-module-bottom-summary-column programm-modules-module-bottom-summary-column">
 										<h4 class="programm-modules-module-bottom-summary-column__title">Задача:</h4>
-										<p class="programm-modules-module-bottom-summary-column__desc">Узнать об инструментах, которые гарантированно приведут к желаемому заработку</p>
+										<p class="programm-modules-module-bottom-summary-column__desc">Узнать об инструментах, которыегарантированно приведут к желаемому заработку</p>
 									</li>
 									<li class="programm-modules-module-bottom-summary-column programm-modules-module-bottom-summary-column">
 										<h4 class="programm-modules-module-bottom-summary-column__title">Теория:</h4>
@@ -480,7 +494,7 @@
 									</li>
 									<li class="programm-modules-module-bottom-summary-column programm-modules-module-bottom-summary-column">
 										<h4 class="programm-modules-module-bottom-summary-column__title programm-modules-module-bottom-summary-column__title--coloring">Результат:</h4>
-										<p class="programm-modules-module-bottom-summary-column__desc">Вы знаете с помощью чего зарабатывать в своём агентстве от 300 000 рублей  до 3 млн через 10 месяцев </p>
+										<p class="programm-modules-module-bottom-summary-column__desc">Вы знаете с помощью чего зарабатывать в своём агентстве от 300 000 рублей до 3 млн через 10 месяцев </p>
 									</li>
 								</ul>
 								<div class="programm-modules-module-bottom-plan">
@@ -507,55 +521,63 @@
 						</article>
 					</div>
 				</div>
+				<div class="programm__smoke programm__smoke--left"></div>
+				<div class="programm__smoke programm__smoke--right"></div>
 			</section>
 
-			<section class="mentors">
+			<section class="mentors lazy" data-bg="./img/mentors/mentors-bg.png">
 				<div class="container">
+					<h2 class="mentors__title section__title">Наставники курса</h2>
 					<div class="metnors-cards">
-						<article class="menotrs-cards-mentor">
-							<img src="./img/mentors/cimoshko.jpg" alt="Дмитрий Цимошко" class="mentors-cards-mentor__img">
+						<article class="mentors-cards-mentor">
+							<img data-src="./img/mentors/cimoshko.jpg" alt="Дмитрий Цимошко" class="mentors-cards-mentor__img lazy">
 							<div class="mentors-cards-mentor__profile">
 								<h3 class="mentors-cards-mentor__name">Дмитрий Цимошко,</h3>
 								<p class="mentors-cards-mentor__occupy">ИТ-директор CENTURY 21 Россия</p>
 							</div>
 							<ul class="mentors-cards-mentor-bullets">
-								<li class="menotrs-cards-mentor-bullets-bullet">Более 15 лет в сфере недвижимости. Знает отраслевые решения и понимает все бизнес-процессы, продумывает и реализует все инновационные проекты</li>
-								<li class="menotrs-cards-mentor-bullets-bullet">Отвечает за бесперебойную работу всех встроенных ИТ-систем С21 Россия</li>
-								<button class="button--thirdly menotrs-cards-mentor__button">Показать полностью</button>
+								<li class="mentors-cards-mentor-bullets-bullet">Более 15 лет в сфере недвижимости. Знает отраслевые решения и понимает все бизнес-процессы, продумывает и реализует все инновационные проекты</li>
+								<li class="mentors-cards-mentor-bullets-bullet">Отвечает за бесперебойную работу всех встроенных ИТ-систем С21 Россия</li>
 							</ul>
+							<button class="button--thirdly mentors-cards-mentor__button">Показать полностью</button>
 						</article>
-						<article class="menotrs-cards-mentor">
-							<img src="./img/mentors/provkin.jpg" alt="Егор Провкин," class="mentors-cards-mentor__img">
+						<article class="mentors-cards-mentor">
+							<img data-src="./img/mentors/provkin.jpg" alt="Егор Провкин," class="mentors-cards-mentor__img lazy">
 							<div class="mentors-cards-mentor__profile">
 								<h3 class="mentors-cards-mentor__name">Егор Провкин,</h3>
 								<p class="mentors-cards-mentor__occupy">генеральный директор CENTURY 21 Россия</p>
 							</div>
 							<ul class="mentors-cards-mentor-bullets">
-								<li class="menotrs-cards-mentor-bullets-bullet">Рекордно улучшил показатели сети, внедрил и наладил работу современных инструментов и сервисов.</li>
-								<li class="menotrs-cards-mentor-bullets-bullet">Автоматизировал бизнес-процессы, что улучшило доходы и эффективность агентств.</li>
-								<button class="button--thirdly menotrs-cards-mentor__button">Показать полностью</button>
+								<li class="mentors-cards-mentor-bullets-bullet">Рекордно улучшил показатели сети, внедрил и наладил работу современных инструментов и сервисов.</li>
+								<li class="mentors-cards-mentor-bullets-bullet">Автоматизировал бизнес-процессы, что улучшило доходы и эффективность агентств.</li>
 							</ul>
+							<button class="button--thirdly mentors-cards-mentor__button">Показать полностью</button>
 						</article>
-						<article class="menotrs-cards-mentor">
-							<img src="./img/mentors/dryagin.jpg" alt="Александр Дрягин" class="mentors-cards-mentor__img">
+						<article class="mentors-cards-mentor">
+							<img data-src="./img/mentors/dryagin.jpg" alt="Александр Дрягин" class="mentors-cards-mentor__img lazy">
 							<div class="mentors-cards-mentor__profile">
 								<h3 class="mentors-cards-mentor__name">Александр Дрягин,</h3>
 								<p class="mentors-cards-mentor__occupy">директор бизнес-академии CENTURY 21 Россия</p>
 							</div>
 							<ul class="mentors-cards-mentor-bullets">
-								<li class="menotrs-cards-mentor-bullets-bullet">Создаёт эффективные бизнес-подразделения в разных сегментах отрасли</li>
-								<li class="menotrs-cards-mentor-bullets-bullet">Топ-эксперт по управлению агентством недвижимости. Знает, как сделать бизнес-процессы...</li>
-								<button class="button--thirdly menotrs-cards-mentor__button">Показать полностью</button>
+								<li class="mentors-cards-mentor-bullets-bullet">Создаёт эффективные бизнес-подразделения в разных сегментах отрасли</li>
+								<li class="mentors-cards-mentor-bullets-bullet">Топ-эксперт по управлению агентством недвижимости. Знает, как сделать бизнес-процессы...</li>
 							</ul>
+							<button class="button--thirdly mentors-cards-mentor__button">Показать полностью</button>
 						</article>
 					</div>
 				</div>
+				<div class="mentors__bill mentors__bill--left"></div>
+				<div class="mentors__bill mentors__bill--bottom"></div>
+				<div class="mentors__butterfly"></div>
 			</section>
 
 			<section class="new">
 				<div class="container">
 					<h2 class="new__title section__title section__title--centered">
-						Курс проводим уже 10 лет, но в этот раз много новинок:
+						Курс проводим уже 10 лет, <br>
+						но в этот раз много <br>
+						новинок:
 					</h2>
 					<ul class="new-bullets">
 						<li class="new-bullets-bullet">
@@ -591,17 +613,19 @@
 				</div>
 			</section>
 
-			<section class="bundles">
+			<section class="bundles lazy" data-bg="./img/bundles/bundles-bg.jpg">
 				<div class="container">
 					<h2 class="bundles__title section__title">
 						тарифы
 					</h2>
 					 <div class="bundles-table">
-						 <aritlce class="bundles-table-bundle">
+						 <aritlce class="bundles-table-bundle bundles-table-bundle--standard">
 							 <h3 class="bundles-table-bundle__name">Стандарт</h3>
 							 <ul class="bundles-table-bundle-stats">
 								 <li class="bundles-table-bundle-stats-stat">
+									<div class="bundles-table-bundle-stats-stat__name-wrap">
 									 <h4 class="bundles-table-bundle-stats-stat__name">Онлайн-доступ к 27 урокам</h4>
+									 </div>
 									 <p class="bundles-table-bundle-stats-stat__desc">
 											<span class="bundles-table-bundle-stats-stat__text">
 												6 месяцев
@@ -609,19 +633,25 @@
 										</p>
 								 </li>
 								 <li class="bundles-table-bundle-stats-stat">
+									<div class="bundles-table-bundle-stats-stat__name-wrap">
 									 <h4 class="bundles-table-bundle-stats-stat__name">Обратная связь по практическим заданиям</h4>
+									 </div>
 									 <p class="bundles-table-bundle-stats-stat__desc">
 										 <img src="./img/bundles/no.svg" alt="" class="bundles-table-bundle-stats-stat__desc-icon">
 										</p>
 								 </li>
 								 <li class="bundles-table-bundle-stats-stat">
+									<div class="bundles-table-bundle-stats-stat__name-wrap">
 									 <h4 class="bundles-table-bundle-stats-stat__name">Коучинговые вебинары, 10 часов в месяц</h4>
+									 </div>
 									 <p class="bundles-table-bundle-stats-stat__desc">
 										 <img src="./img/bundles/no.svg" alt="" class="bundles-table-bundle-stats-stat__desc-icon">
 										</p>
 								 </li>
 								 <li class="bundles-table-bundle-stats-stat">
+									<div class="bundles-table-bundle-stats-stat__name-wrap">
 									 <h4 class="bundles-table-bundle-stats-stat__name">Время прохождения курса</h4>
+									 </div>
 									 <p class="bundles-table-bundle-stats-stat__desc">
 										<span class="bundles-table-bundle-stats-stat__text">
 												1 месяц
@@ -631,16 +661,20 @@
 							 </ul>
 							 <div class="bundles-table-bundle-price">
 									<p class="bundles-table-bundle-price__title">Цена:</p>
-									<p class="bundles-table-bundle-price__cost">25 000</p>
+									<p class="bundles-table-bundle-price__cost">25&nbsp;000₽</p>
 									<button class="button bundles-table-bundle-price__buy">Купить</button>
 								</div>
 								<button class="bundles-table-bundle__more">Подробнее</button>
 						 </aritlce>
-						 <aritlce class="bundles-table-bundle">
-							 <h3 class="bundles-table-bundle__name"></h3>
-							 <ul class="bundles-table-bundle-stats">
-								 <li class="bundles-table-bundle-stats-stat">
-									 <h4 class="bundles-table-bundle-stats-stat__name">Онлайн-доступ к 27 урокам</h4>
+							<aritlce class="bundles-table-bundle bundles-table-bundle--ofline">
+								<h3 class="bundles-table-bundle__name">Офлайн-мастер </h3>
+								<ul class="bundles-table-bundle-stats">
+								<li class="bundles-table-bundle-stats-stat">
+									<div class="bundles-table-bundle-stats-stat__name-wrap">
+										<h4 class="bundles-table-bundle-stats-stat__name">
+											Онлайн-доступ к 27 урокам
+										</h4>
+									</div>
 									 <p class="bundles-table-bundle-stats-stat__desc">
 											<span class="bundles-table-bundle-stats-stat__text">
 												6 месяцев
@@ -648,19 +682,25 @@
 										</p>
 								 </li>
 								 <li class="bundles-table-bundle-stats-stat">
+									<div class="bundles-table-bundle-stats-stat__name-wrap">
 									 <h4 class="bundles-table-bundle-stats-stat__name">Обратная связь по практическим заданиям</h4>
+									 </div>
 									 <p class="bundles-table-bundle-stats-stat__desc">
 										 <img src="./img/bundles/yes.svg" alt="" class="bundles-table-bundle-stats-stat__desc-icon">
 										</p>
 								 </li>
 								 <li class="bundles-table-bundle-stats-stat">
+									<div class="bundles-table-bundle-stats-stat__name-wrap">
 									 <h4 class="bundles-table-bundle-stats-stat__name">Коучинговые вебинары, 10 часов в месяц</h4>
+									 </div>
 									 <p class="bundles-table-bundle-stats-stat__desc">
 										 <img src="./img/bundles/no.svg" alt="" class="bundles-table-bundle-stats-stat__desc-icon">
 										</p>
 								 </li>
 								 <li class="bundles-table-bundle-stats-stat">
+									<div class="bundles-table-bundle-stats-stat__name-wrap">
 									 <h4 class="bundles-table-bundle-stats-stat__name">Время прохождения курса</h4>
+									 </div>
 									 <p class="bundles-table-bundle-stats-stat__desc">
 											<span class="bundles-table-bundle-stats-stat__text">
 												5 дней в Москве
@@ -670,16 +710,18 @@
 							 </ul>
 							 <div class="bundles-table-bundle-price">
 								 <p class="bundles-table-bundle-price__title">Цена:</p>
-								 <p class="bundles-table-bundle-price__cost">30 000 рублей </p>
+								 <p class="bundles-table-bundle-price__cost">30&nbsp;000₽</p>
 								 <button class="button bundles-table-bundle-price__buy">Купить</button>
 								</div>
 								<button class="bundles-table-bundle__more">Подробнее</button>
 						 </aritlce>
-						 <aritlce class="bundles-table-bundle">
-							 <h3 class="bundles-table-bundle__name"></h3>
+						 <aritlce class="bundles-table-bundle bundles-table-bundle--online">
+							 <h3 class="bundles-table-bundle__name">Онлайн-мастер </h3>
 							 <ul class="bundles-table-bundle-stats">
 								 <li class="bundles-table-bundle-stats-stat">
+									<div class="bundles-table-bundle-stats-stat__name-wrap">
 									 <h4 class="bundles-table-bundle-stats-stat__name">Онлайн-доступ к 27 урокам</h4>
+									 </div>
 									 <p class="bundles-table-bundle-stats-stat__desc">
 											<span class="bundles-table-bundle-stats-stat__text">
 												12 месяцев
@@ -687,19 +729,25 @@
 										</p>
 								 </li>
 								 <li class="bundles-table-bundle-stats-stat">
+									<div class="bundles-table-bundle-stats-stat__name-wrap">
 									 <h4 class="bundles-table-bundle-stats-stat__name">Обратная связь по практическим заданиям</h4>
+									 </div>
 									 <p class="bundles-table-bundle-stats-stat__desc">
 										 <img src="./img/bundles/yes.svg" alt="" class="bundles-table-bundle-stats-stat__desc-icon">
 										</p>
 								 </li>
 								 <li class="bundles-table-bundle-stats-stat">
+									<div class="bundles-table-bundle-stats-stat__name-wrap">
 									 <h4 class="bundles-table-bundle-stats-stat__name">Коучинговые вебинары, 10 часов в месяц</h4>
+									 </div>
 									 <p class="bundles-table-bundle-stats-stat__desc">
 										 <img src="./img/bundles/yes.svg" alt="" class="bundles-table-bundle-stats-stat__desc-icon">
 										</p>
 								 </li>
 								 <li class="bundles-table-bundle-stats-stat">
+									<div class="bundles-table-bundle-stats-stat__name-wrap">
 									 <h4 class="bundles-table-bundle-stats-stat__name">Время прохождения курса</h4>
+									 </div>
 									 <p class="bundles-table-bundle-stats-stat__desc">
 											<span class="bundles-table-bundle-stats-stat__text">
 												1 месяц
@@ -709,7 +757,7 @@
 							 </ul>
 							 <div class="bundles-table-bundle-price">
 								 <p class="bundles-table-bundle-price__title">Цена:</p>
-								 <p class="bundles-table-bundle-price__cost">35 000 рублей </p>
+								 <p class="bundles-table-bundle-price__cost">35&nbsp;000₽</p>
 								 <button class="button bundles-table-bundle-price__buy">Купить</button>
 								</div>
 								<button class="bundles-table-bundle__more">Подробнее</button>
@@ -718,14 +766,14 @@
 				</div>
 			</section>
 
-			<section class="reviews">
+			<section class="reviews lazy" data-bg="./img/general/noise-bg.png">
 				<div class="container">
-					<h2 class="reviews__title section__title"></h2>
+					<h2 class="reviews__title section__title">отзывы</h2>
 					<div class="swiper reviews-slider">
 						<div class="swiper-wrapper">
 							<article class="swiper-slide reviews-slider-slide">
-								<img src="./reviews/reviews-1.png" alt="" class="review-slider-slide__thumb">
-								<button class="reviews-slider-slide__button">
+								<img data-src="./img/reviews/reviews-1.png" alt="" class="reviews-slider-slide__media review-slider-slide__thumb lazy">
+								<button class="reviews-slider-slide__play">
 									<svg width="68" height="49" viewBox="0 0 68 49" fill="none" xmlns="http://www.w3.org/2000/svg">
 									<path d="M67.9199 17.5544C68.0723 13.1412 67.1072 8.76109 65.1141 4.82066C63.7618 3.20381 61.8851 2.11269 59.811 1.73743C51.2319 0.958991 42.6174 0.639935 34.0043 0.781628C25.4226 0.633504 16.839 0.942265 8.29011 1.7066C6.59994 2.01405 5.03581 2.80683 3.78859 3.98819C1.01368 6.54728 0.705352 10.9255 0.397028 14.6254C-0.0503116 21.2776 -0.0503116 27.9524 0.397028 34.6047C0.486227 36.6871 0.796288 38.7542 1.322 40.7712C1.69376 42.3284 2.44591 43.7691 3.51109 44.9644C4.7668 46.2083 6.36736 47.0462 8.10511 47.3693C14.7523 48.1898 21.45 48.5298 28.1461 48.3868C38.9375 48.5409 48.403 48.3868 59.5951 47.5235C61.3756 47.2202 63.0212 46.3813 64.3125 45.1185C65.1757 44.255 65.8204 43.198 66.1933 42.0353C67.2959 38.6518 67.8375 35.1107 67.7965 31.5523C67.9199 29.8257 67.9199 19.4044 67.9199 17.5544ZM27.0362 33.4022V14.317L45.2889 23.9059C40.1708 26.7425 33.4185 29.949 27.0362 33.4022Z" fill="url(#paint0_diamond_413_648)"/>
 									<defs>
@@ -738,8 +786,8 @@
 								</button>
 							</article>
 							<article class="swiper-slide reviews-slider-slide">
-								<img src="./reviews/reviews-2.png" alt="" class="review-slider-slide__thumb">
-								<button class="reviews-slider-slide__button">
+								<img data-src="./img/reviews/reviews-2.png" alt="" class="reviews-slider-slide__media review-slider-slide__thumb lazy">
+								<button class="reviews-slider-slide__play">
 									<svg width="68" height="49" viewBox="0 0 68 49" fill="none" xmlns="http://www.w3.org/2000/svg">
 									<path d="M67.9199 17.5544C68.0723 13.1412 67.1072 8.76109 65.1141 4.82066C63.7618 3.20381 61.8851 2.11269 59.811 1.73743C51.2319 0.958991 42.6174 0.639935 34.0043 0.781628C25.4226 0.633504 16.839 0.942265 8.29011 1.7066C6.59994 2.01405 5.03581 2.80683 3.78859 3.98819C1.01368 6.54728 0.705352 10.9255 0.397028 14.6254C-0.0503116 21.2776 -0.0503116 27.9524 0.397028 34.6047C0.486227 36.6871 0.796288 38.7542 1.322 40.7712C1.69376 42.3284 2.44591 43.7691 3.51109 44.9644C4.7668 46.2083 6.36736 47.0462 8.10511 47.3693C14.7523 48.1898 21.45 48.5298 28.1461 48.3868C38.9375 48.5409 48.403 48.3868 59.5951 47.5235C61.3756 47.2202 63.0212 46.3813 64.3125 45.1185C65.1757 44.255 65.8204 43.198 66.1933 42.0353C67.2959 38.6518 67.8375 35.1107 67.7965 31.5523C67.9199 29.8257 67.9199 19.4044 67.9199 17.5544ZM27.0362 33.4022V14.317L45.2889 23.9059C40.1708 26.7425 33.4185 29.949 27.0362 33.4022Z" fill="url(#paint0_diamond_413_648)"/>
 									<defs>
@@ -752,8 +800,8 @@
 								</button>
 							</article>
 							<article class="swiper-slide reviews-slider-slide">
-								<img src="./reviews/reviews-1.png" alt="" class="review-slider-slide__thumb">
-								<button class="reviews-slider-slide__button">
+								<img data-src="./img/reviews/reviews-1.png" alt="" class="reviews-slider-slide__media review-slider-slide__thumb lazy">
+								<button class="reviews-slider-slide__play">
 									<svg width="68" height="49" viewBox="0 0 68 49" fill="none" xmlns="http://www.w3.org/2000/svg">
 									<path d="M67.9199 17.5544C68.0723 13.1412 67.1072 8.76109 65.1141 4.82066C63.7618 3.20381 61.8851 2.11269 59.811 1.73743C51.2319 0.958991 42.6174 0.639935 34.0043 0.781628C25.4226 0.633504 16.839 0.942265 8.29011 1.7066C6.59994 2.01405 5.03581 2.80683 3.78859 3.98819C1.01368 6.54728 0.705352 10.9255 0.397028 14.6254C-0.0503116 21.2776 -0.0503116 27.9524 0.397028 34.6047C0.486227 36.6871 0.796288 38.7542 1.322 40.7712C1.69376 42.3284 2.44591 43.7691 3.51109 44.9644C4.7668 46.2083 6.36736 47.0462 8.10511 47.3693C14.7523 48.1898 21.45 48.5298 28.1461 48.3868C38.9375 48.5409 48.403 48.3868 59.5951 47.5235C61.3756 47.2202 63.0212 46.3813 64.3125 45.1185C65.1757 44.255 65.8204 43.198 66.1933 42.0353C67.2959 38.6518 67.8375 35.1107 67.7965 31.5523C67.9199 29.8257 67.9199 19.4044 67.9199 17.5544ZM27.0362 33.4022V14.317L45.2889 23.9059C40.1708 26.7425 33.4185 29.949 27.0362 33.4022Z" fill="url(#paint0_diamond_413_648)"/>
 									<defs>
@@ -766,21 +814,23 @@
 								</button>
 							</article>
 						</div>
-						<div class="swiper-pagination reviews-slider__pagination"></div>
-						<div class="swiper-button-prev reviews-slider__button-prev"></div>
-						<div class="swiper-button-next reviews-slider__button-next"></div>
-						<div class="swiper-scrollbar reviews-slider__scrollbar"></div>
+						<div class="reviews-slider__nav-wrap">
+							<div class="swiper-pagination reviews-slider__pagination"></div>
+							<div class="swiper-button-prev reviews-slider__button-prev"></div>
+							<div class="swiper-button-next reviews-slider__button-next"></div>
+						</div>
 					</div>
 				</div>
 			</section>
 
 			<section class="why">
+				<div class="why__image-top"></div>
 				<div class="container">
 					<h2 class="why__title section__title">Почему наш формат приводит к результатам: </h2>
 					<ul class="why-cards">
 						<li class="why-cards-card">
 							<div class="why-cards-card__img-wrap">
-								<img src="./img/why/mentors.png" alt="Наставники" class="why-cards-card__img">
+								<img data-src="./img/why/mentors.png" alt="Наставники" class="why-cards-card__img lazy">
 							</div>
 							<h3 class="why-cards-card__title">Наставники</h3>
 							<p class="why-cards-card__desc">
@@ -792,7 +842,7 @@
 						</li>
 						<li class="why-cards-card">
 							<div class="why-cards-card__img-wrap">
-								<img src="./img/why/motivation.png" alt="Мотивация" class="why-cards-card__img">
+								<img data-src="./img/why/motivation.png" alt="Мотивация" class="why-cards-card__img lazy">
 							</div>
 							<h3 class="why-cards-card__title">Мотивация</h3>
 							<p class="why-cards-card__desc">
@@ -804,7 +854,7 @@
 						</li>
 						<li class="why-cards-card">
 							<div class="why-cards-card__img-wrap">
-								<img src="./img/why/materials.png" alt="Материалы" class="why-cards-card__img">
+								<img data-src="./img/why/materials.png" alt="Материалы" class="why-cards-card__img lazy">
 							</div>
 							<h3 class="why-cards-card__title">Материалы</h3>
 							<p class="why-cards-card__desc">
@@ -816,7 +866,7 @@
 						</li>
 						<li class="why-cards-card">
 							<div class="why-cards-card__img-wrap">
-								<img src="./img/why/practice.png" alt="Практика" class="why-cards-card__img">
+								<img data-src="./img/why/practice.png" alt="Практика" class="why-cards-card__img lazy">
 							</div>
 							<h3 class="why-cards-card__title">Практика</h3>
 							<p class="why-cards-card__desc">
@@ -827,7 +877,7 @@
 						</li>
 						<li class="why-cards-card">
 							<div class="why-cards-card__img-wrap">
-								<img src="./img/why/format.png" alt="Формат" class="why-cards-card__img">
+								<img data-src="./img/why/format.png" alt="Формат" class="why-cards-card__img lazy">
 							</div>
 							<h3 class="why-cards-card__title">Формат</h3>
 							<p class="why-cards-card__desc">
@@ -847,27 +897,37 @@
 							</p>
 						</li>
 					</ul>
-					<div class="buttons--aligner">
+					<div class="buttons--centered">
 						<a href="#bundles" class="button button--primary why__button">я с вами!</a>
 					</div>
 				</div>
 			</section>
 
 			<section class="refund">
-				<h2 class="refund__title">Если после первого модуля вам что-то не понравится, то мы вернем деньги!</h2>
-				<a href="" class="button button--primary refund__button">выбрать тариф</a>
-				<div class="refund__img-wrap"><img src="./img/refund/refund-hero.png" alt="Если после первого модуля вам что-то не понравится,то мы вернем деньги!" class="refund__img"></div>
+				<div class="container">
+					<div class="refund__inner">
+						<h2 class="refund__title">Если после первого модуля вам что-то не понравится, то мы вернем деньги!</h2>
+						<a href="#" class="button button--primary refund__button">выбрать тариф</a>
+						<div class="refund__img-wrap">
+							<img data-src="./img/refund/refund-hero.png" alt="Если после первого модуля вам что-то не понравится,то мы вернем деньги!" class="refund__img lazy">
+						</div>
+					</div>
+				</div>
 			</section>
 
-			<section class="question">
-				<div class="container question__inner">
-					<div class="question__text">
-						<h2 class="question__title">Худший вопрос тот, который так и не был задан.</h2>
-						<p class="question__desc">Если вам что-то непонятно, оставьте заявку, и мы ответим на все интересующие вас вопросы</p>
-						<button class="button button--primary question__button">Задать вопрос</button>
-					</div>
+			<section class="question lazy" data-bg="./img/question/question-bg.jpg">
+				<div class="container container--question">
 					<div class="question__img-wrap">
 						<img src="./img/question/question-hero.png" alt="Если вам что-то непонятно, оставьте заявку, и мы ответим на все интересующие вас вопросы" class="question__img">
+					</div>
+					<div class="question__text">
+						<h2 class="question__title">Худший вопрос тот, который так и не был задан.</h2>
+						<p class="question__desc">
+							Если вам что-то непонятно, оставьте <br>
+							заявку, и мы ответим на все <br>
+							интересующие вас вопросы
+						</p>
+						<button class="button button--primary question__button">Задать вопрос</button>
 					</div>
 				</div>
 			</section>
@@ -887,31 +947,89 @@
 					</div>
 					<address class="footer-contacts">
 						<p class="footer-contacts__contact footer-contacts__contact--geo">
-							<span class="footer-contacts__contact-text">109316, Россия, г. Москва, Волгоградский проспект, д. 4А</span>
+							<svg class="footer-contacts__contact-icon" width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<g clip-path="url(#clip0_330_1100)">
+									<path d="M8.98047 0.15918C5.66047 0.15918 2.98047 2.83918 2.98047 6.15918C2.98047 10.1592 8.98047 16.1592 8.98047 16.1592C8.98047 16.1592 14.9805 10.1592 14.9805 6.15918C14.9805 2.83918 12.3005 0.15918 8.98047 0.15918ZM8.98047 2.15918C10.0413 2.15918 11.0588 2.58061 11.8089 3.33075C12.559 4.0809 12.9805 5.09831 12.9805 6.15918C12.9805 8.37918 11.2005 10.1592 8.98047 10.1592C7.9196 10.1592 6.90219 9.73775 6.15204 8.98761C5.4019 8.23746 4.98047 7.22005 4.98047 6.15918C4.98047 5.09831 5.4019 4.0809 6.15204 3.33075C6.90219 2.58061 7.9196 2.15918 8.98047 2.15918Z" fill="white"/>
+								</g>
+								<defs>
+								<clipPath id="clip0_330_1100">
+									<rect width="16" height="16" fill="white" transform="translate(0.980469 0.15918)"/>
+								</clipPath>
+								</defs>
+							</svg>
+							<span class="footer-contacts__contact-text">
+								109316, Россия, г. Москва, <br>
+								Волгоградский проспект, д. 4А
+							</span>
 						</p>
 						<a href="tel:+74959683227" class="footer-contacts__contact footer-contacts__contact--tel">
+						<svg class="footer-contacts__contact-icon" width="19" height="18" viewBox="0 0 19 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M18.3527 14.504L15.8689 16.9085C15.5022 17.2755 15.0163 17.3998 14.543 17.4003C12.4499 17.3392 10.4715 16.3358 8.84708 15.3055C6.18072 13.4125 3.73422 11.0653 2.19875 8.22869C1.60984 7.03922 0.918841 5.52156 0.984861 4.19389C0.990748 3.69445 1.12866 3.20429 1.48909 2.88236L3.97288 0.459659C4.48865 0.0315264 4.98743 0.179552 5.31749 0.678245L7.31571 4.37606C7.52603 4.81413 7.40538 5.28351 7.09159 5.59654L6.17651 6.48911C6.12001 6.56463 6.08405 6.65059 6.08314 6.74415C6.43404 8.06971 7.49709 9.29146 8.43619 10.1323C9.37528 10.9731 10.3847 12.1122 11.695 12.3819C11.857 12.426 12.0553 12.4415 12.1712 12.3364L13.2357 11.2798C13.6027 11.0084 14.1325 10.8758 14.5243 11.0977H14.543L18.1472 13.1743C18.6764 13.498 18.7315 14.1235 18.3527 14.504Z" fill="white"/>
+						</svg>
+
 							<span class="footer-contacts__contact-text">
 								Связаться с нами:<br>
-								+7 (495) 968-32-27
+								+7&nbsp;(495)&nbsp;968-32-27
 							</span>
 						</a>
 					</address>
 					<div class="footer-socials">
-						<a href="" class="footer-socials-link footer-socials-link--instagram"></a>
-						<a href="" class="footer-socials-link footer-socials-link--viber"></a>
-						<a href="" class="footer-socials-link footer-socials-link--whatsapp"></a>
-						<a href="" class="footer-socials-link footer-socials-link--telegram"></a>
-						<a href="" class="footer-socials-link footer-socials-link--facebook"></a>
+						<a href="#" class="footer-socials-link footer-socials-link--instagram">
+							<svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M17.5381 8.38086H15.5986V10.3788H17.5381V8.38086Z" fill="white"/>
+								<path d="M16.3477 12.9591C16.3477 14.734 14.9035 16.1782 13.1286 16.1782C11.3535 16.1782 9.90934 14.734 9.90934 12.9591C9.90934 12.4788 10.0181 12.0241 10.2074 11.6143H8.08008V17.1401C8.08008 17.6417 8.4882 18.0498 8.98982 18.0498H17.2675C17.7691 18.0498 18.1772 17.6417 18.1772 17.1401V11.6145H16.0496C16.239 12.0243 16.3477 12.4788 16.3477 12.9591Z" fill="white"/>
+								<path d="M13.1296 14.8736C14.185 14.8736 15.044 14.0147 15.044 12.9591C15.044 12.4353 14.8323 11.9604 14.4902 11.6143H11.7684C11.4266 11.9602 11.2148 12.4353 11.2148 12.9591C11.2148 14.0147 12.0737 14.8736 13.1296 14.8736Z" fill="white"/>
+								<path d="M13.1275 0.405273C6.18271 0.405273 0.552734 6.03546 0.552734 12.9803C0.552734 19.9248 6.18271 25.5557 13.1275 25.5557C20.0723 25.5557 25.7027 19.925 25.7027 12.9803C25.7025 6.03546 20.0723 0.405273 13.1275 0.405273ZM19.4806 17.1397C19.4806 18.3606 18.4874 19.3541 17.2663 19.3541H8.98867C7.76779 19.3541 6.77434 18.3608 6.77434 17.1397V8.82403C6.77434 7.60315 7.76757 6.6097 8.98867 6.6097H17.2663C18.4872 6.6097 19.4806 7.60293 19.4806 8.82403V17.1397Z" fill="white"/>
+							</svg>
+						</a>
+						<a href="#" class="footer-socials-link footer-socials-link--viber">
+							<svg width="26" height="25" viewBox="0 0 26 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path fill-rule="evenodd" clip-rule="evenodd" d="M12.8828 0.0556641C19.6486 0.0556641 25.1328 5.53989 25.1328 12.3057C25.1328 19.0714 19.6486 24.5557 12.8828 24.5557C6.11704 24.5557 0.632812 19.0714 0.632812 12.3057C0.632812 5.53989 6.11704 0.0556641 12.8828 0.0556641ZM13.6164 5.04519C14.4494 5.14932 15.1227 5.35003 15.861 5.71046C16.5875 6.06571 17.0525 6.40211 17.6674 7.01367C18.2436 7.5913 18.5635 8.029 18.9023 8.7084C19.3744 9.65589 19.6434 10.7829 19.6891 12.023C19.7061 12.4461 19.6938 12.5403 19.5972 12.6614C19.4135 12.8956 19.0087 12.8569 18.8707 12.5935C18.8274 12.5064 18.8151 12.4315 18.8005 12.0932C18.7765 11.5735 18.7402 11.2371 18.6676 10.8357C18.3817 9.26201 17.6264 8.00497 16.4202 7.10319C15.4157 6.34887 14.3769 5.98137 13.0162 5.90175C12.5558 5.8749 12.4762 5.85792 12.3721 5.7783C12.178 5.62564 12.1685 5.26803 12.3551 5.10124C12.4687 4.99759 12.5483 4.98251 12.9431 4.99476C13.149 5.00182 13.452 5.02634 13.6169 5.04566L13.6164 5.04519ZM8.08129 5.30668C8.1661 5.33589 8.29661 5.40326 8.372 5.45179C8.83184 5.75616 10.1129 7.39293 10.5318 8.21039C10.7716 8.67683 10.8512 9.02266 10.7763 9.27897C10.6985 9.55459 10.5704 9.6997 9.99654 10.1614C9.76661 10.3475 9.55081 10.5384 9.51736 10.5892C9.43019 10.715 9.35951 10.9615 9.35951 11.1358C9.36234 11.5396 9.62338 12.2722 9.96732 12.8353C10.234 13.273 10.7108 13.8341 11.1829 14.2642C11.7375 14.7717 12.2265 15.1175 12.7787 15.3908C13.4882 15.7441 13.9217 15.8337 14.2388 15.6857C14.3189 15.6494 14.4037 15.6009 14.4301 15.5792C14.4541 15.5576 14.6407 15.3305 14.8442 15.0789C15.2362 14.5856 15.3257 14.5059 15.5948 14.4141C15.9364 14.2982 16.285 14.3293 16.636 14.5083C16.9022 14.6464 17.4831 15.0063 17.8587 15.2673C18.3524 15.6132 19.4088 16.474 19.5511 16.6455C19.8031 16.955 19.8465 17.3517 19.6773 17.789C19.4983 18.2507 18.801 19.1167 18.3138 19.4865C17.8733 19.8201 17.5609 19.9482 17.1491 19.9671C16.8099 19.9845 16.6699 19.9553 16.2365 19.7763C12.8366 18.377 10.1223 16.2879 7.96773 13.4181C6.84167 11.9189 5.98417 10.3645 5.39853 8.75174C5.05694 7.81131 5.04046 7.40284 5.3208 6.92179C5.44189 6.71872 5.95779 6.21553 6.3333 5.93519C6.95758 5.47111 7.24592 5.29912 7.47584 5.25107C7.63321 5.21714 7.90697 5.24402 8.08129 5.30668ZM13.7837 6.79833C15.2537 7.01365 16.3915 7.69543 17.1373 8.80264C17.5562 9.42644 17.8177 10.1591 17.9072 10.9445C17.9388 11.2324 17.9388 11.7572 17.9048 11.8444C17.8733 11.9264 17.7715 12.0376 17.6843 12.0833C17.5901 12.1318 17.3889 12.1271 17.2777 12.0691C17.0912 11.9749 17.0356 11.8246 17.0356 11.4189C17.0356 10.7923 16.873 10.1327 16.5927 9.61962C16.2768 9.03844 15.8099 8.55322 15.2414 8.2151C14.7547 7.92487 14.0353 7.71003 13.3794 7.65679C13.142 7.63747 13.011 7.58895 12.9214 7.48482C12.8545 7.41123 12.8145 7.31712 12.8079 7.21787C12.8013 7.11862 12.8286 7.02006 12.8852 6.93826C13.011 6.74274 13.2051 6.71117 13.7837 6.79833ZM14.2991 8.6236C14.7764 8.72536 15.142 8.90628 15.4544 9.19934C15.8563 9.57862 16.0763 10.038 16.1734 10.6981C16.2388 11.1283 16.212 11.2979 16.0598 11.4378C15.9166 11.5683 15.6527 11.5735 15.493 11.4501C15.3766 11.3629 15.3403 11.271 15.314 11.0222C15.2824 10.691 15.2244 10.4587 15.125 10.2434C14.9121 9.7864 14.5366 9.5499 13.9024 9.47216C13.6041 9.43588 13.5146 9.40242 13.418 9.2884C13.2414 9.07826 13.3087 8.73713 13.5537 8.6118C13.6456 8.56563 13.6842 8.56095 13.8878 8.57272C14.0258 8.58089 14.1632 8.59788 14.2991 8.6236Z" fill="white"/>
+							</svg>
+						</a>
+						<a href="#" class="footer-socials-link footer-socials-link--whatsapp">
+							<svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<g clip-path="url(#clip0_330_1081)">
+									<path d="M12.1358 0.0556641H12.1298C5.51333 0.0556641 0.132828 5.43766 0.132828 12.0557C0.12872 14.5832 0.928802 17.0465 2.41733 19.0892L0.921828 23.5472L5.53433 22.0727C7.49088 23.3707 9.78784 24.0607 12.1358 24.0557C18.7523 24.0557 24.1328 18.6722 24.1328 12.0557C24.1328 5.43916 18.7523 0.0556641 12.1358 0.0556641Z" fill="white"/>
+									<path d="M19.1186 17.0009C18.8291 17.8184 17.6801 18.4964 16.7636 18.6944C16.1366 18.8279 15.3176 18.9344 12.5606 17.7914C9.03413 16.3304 6.76313 12.7469 6.58613 12.5144C6.41663 12.2819 5.16113 10.6169 5.16113 8.89495C5.16113 7.17295 6.03563 6.33445 6.38813 5.97445C6.67763 5.67895 7.15613 5.54395 7.61513 5.54395C7.76363 5.54395 7.89713 5.55145 8.01713 5.55745C8.36963 5.57245 8.54663 5.59345 8.77913 6.14995C9.06863 6.84745 9.77363 8.56945 9.85763 8.74645C9.94313 8.92345 10.0286 9.16345 9.90863 9.39595C9.79613 9.63595 9.69713 9.74244 9.52013 9.94645C9.34313 10.1504 9.17513 10.3064 8.99813 10.5254C8.83613 10.7159 8.65313 10.9199 8.85713 11.2724C9.06113 11.6174 9.76613 12.7679 10.8041 13.6919C12.1436 14.8844 13.2296 15.2654 13.6181 15.4274C13.9076 15.5474 14.2526 15.5189 14.4641 15.2939C14.7326 15.0044 15.0641 14.5244 15.4016 14.0519C15.6416 13.7129 15.9446 13.6709 16.2626 13.7909C16.5866 13.9034 18.3011 14.7509 18.6536 14.9264C19.0061 15.1034 19.2386 15.1874 19.3241 15.3359C19.4081 15.4844 19.4081 16.1819 19.1186 17.0009Z" fill="#0A1013"/>
+								</g>
+								<defs>
+									<clipPath id="clip0_330_1081">
+										<rect width="24" height="24" fill="white" transform="translate(0.132812 0.0556641)"/>
+									</clipPath>
+								</defs>
+							</svg>
+						</a>
+						<a href="#" class="footer-socials-link footer-socials-link--telegram">
+							<svg width="25" height="26" viewBox="0 0 25 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M12.5566 0.555664C10.0994 0.555664 7.69742 1.28431 5.65434 2.64946C3.61125 4.0146 2.01886 5.95494 1.07853 8.2251C0.138196 10.4953 -0.107838 12.9933 0.371538 15.4033C0.850915 17.8132 2.03417 20.027 3.77167 21.7645C5.50918 23.502 7.72289 24.6852 10.1329 25.1646C12.5429 25.644 15.0409 25.3979 17.311 24.4576C19.5812 23.5173 21.5215 21.9249 22.8867 19.8818C24.2518 17.8387 24.9805 15.4367 24.9805 12.9795C24.9806 11.3479 24.6593 9.73233 24.035 8.22494C23.4107 6.71755 22.4956 5.3479 21.3419 4.19422C20.1882 3.04053 18.8186 2.1254 17.3112 1.5011C15.8038 0.876788 14.1882 0.555529 12.5566 0.555664ZM16.5068 19.3808C16.4603 19.4968 16.3896 19.6015 16.2993 19.6878C16.209 19.7742 16.1013 19.8403 15.9835 19.8816C15.8656 19.923 15.7402 19.9387 15.6158 19.9276C15.4913 19.9165 15.3707 19.879 15.2619 19.8175L11.8893 17.1969L9.72466 19.1939C9.67443 19.231 9.61568 19.2549 9.5538 19.2633C9.49193 19.2718 9.42892 19.2645 9.37058 19.2423L9.78553 15.5295L9.79882 15.54L9.8073 15.4667C9.8073 15.4667 15.8763 9.94118 16.1236 9.70576C16.3739 9.47095 16.2913 9.42002 16.2913 9.42002C16.3055 9.13361 15.8422 9.42002 15.8422 9.42002L7.8008 14.5933L4.45197 13.4528C4.45197 13.4528 3.93763 13.2683 3.88917 12.8627C3.83824 12.4602 4.46873 12.2415 4.46873 12.2415L17.7834 6.95206C17.7834 6.95206 18.8779 6.4644 18.8779 7.27199L16.5068 19.3808Z" fill="white"/>
+							</svg>
+						</a>
+						<a href="#" class="footer-socials-link footer-socials-link--facebook">
+							<svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<g clip-path="url(#clip0_330_1077)">
+									<path d="M25.9805 13.0557C25.9805 6.1521 20.384 0.555664 13.4805 0.555664C6.57691 0.555664 0.980469 6.1521 0.980469 13.0557C0.980469 19.2948 5.55154 24.4661 11.5273 25.4038V16.6689H8.35352V13.0557H11.5273V10.3018C11.5273 7.16894 13.3935 5.43848 16.2488 5.43848C17.6164 5.43848 19.0469 5.68262 19.0469 5.68262V8.75879H17.4706C15.9178 8.75879 15.4336 9.72233 15.4336 10.7109V13.0557H18.9004L18.3462 16.6689H15.4336V25.4038C21.4094 24.4661 25.9805 19.2948 25.9805 13.0557Z" fill="white"/>
+									<path d="M18.3462 16.6689L18.9004 13.0557H15.4336V10.7109C15.4336 9.72233 15.9178 8.75879 17.4706 8.75879H19.0469V5.68262C19.0469 5.68262 17.6164 5.43848 16.2488 5.43848C13.3935 5.43848 11.5273 7.16894 11.5273 10.3018V13.0557H8.35352V16.6689H11.5273V25.4038C12.8216 25.6063 14.1394 25.6063 15.4336 25.4038V16.6689H18.3462Z" fill="#0A1013"/>
+								</g>
+								<defs>
+									<clipPath id="clip0_330_1077">
+										<rect width="25" height="25" fill="white" transform="translate(0.980469 0.555664)"/>
+									</clipPath>
+								</defs>
+							</svg>
+						</a>
 					</div>
 					<div class="footer-privacy">
 						<a href="#privacy" class="footer-privacy__policy">Политика конфиденциальности</a>
-						<p class="footer-privacy__disclaimer">Информация на сайте не является публичной офертой</p>
+						<p class="footer-privacy__disclaimer">
+							Информация на сайте не <br>
+							является публичной офертой
+						</p>
 					</div>
 					<p class="footer__disclaimer">
-						Все показатели, упоминаемые на Сайте, в том
-						числе денежные суммы и сроки, указаны в соответствии с выводами экспертов ООО
-						“РУС ГЛОБАЛ ГРУПП” на основе наблюдений за деятельностью агентств
-						недвижимости CENTURY 21 в России
+						Все показатели, упоминаемые на Сайте, в том числе денежные суммы и сроки, указаны в <br>
+						соответствии с выводами экспертов ООО “РУС ГЛОБАЛ ГРУПП” на основе наблюдений за <br>
+						деятельностью агентств недвижимости CENTURY 21 в России
 					</p>
 				</div>
 			</div>
@@ -919,17 +1037,18 @@
 
 		<div class="popups">
 			<div class="popups-callback">
-				<img src="./img/general/pop-top.png" alt="Вам преезвонят" class="popups-callback__img">
+				<img src="./img/general/pop-top.png" alt="Вам перезвонят" class="popups-callback__img">
 				<h3 class="popups-callback__title">
-					Оставьте заявку наш менеджер свяжется с вами
+					Оставьте заявку наш <br>
+					менеджер свяжется с вами <br>
 					в ближайшее время
 				</h3>
 				<form action="" class="popups-callback__form">
 					<div class="popups-callback-form__input-wrap popups-callback-form__input-wrap--name">
-						<input class="popups-callback-form__input popups-callback-form__input--name" name="user-name" type="text" placeholder="" maxlength="50">
+						<input class="input popups-callback-form__input popups-callback-form__input--name" name="user-name" type="text" placeholder="Сергей Викторович" maxlength="50">
 					</div>
 					<div class="popups-callback-form__input-wrap popups-callback-form__input-wrap--tel">
-						<input class="popups-callback-form__input popups-callback-form__input--phone" name="user-tel" type="tel" placeholder="" maxlength="25" minlength="10" required inputmode="numeric">
+						<input class="input popups-callback-form__input popups-callback-form__input--phone" name="user-tel" type="tel" placeholder="+7 999 844-19-89" maxlength="25" minlength="10" required inputmode="numeric">
 					</div>
 					<button class="button button--primary popups-callback-form__submit">отправить</button>
 				</form>
@@ -940,8 +1059,9 @@
 			</div>
 		</div>
 
-
 		<script src="./assets/poppa/poppa.js"></script>
+		<script src="./js/swiper-bundle.min.js"></script>
+		<script src="./js/lazyload.min.js"></script>
 		<script src="./js/index.js"></script>
 	</body>
 </html>

@@ -1,0 +1,125 @@
+.programm {
+	background-color: #131c22;
+	background-image: linear-gradient(180deg, #090F12 0%, #131C22 35.42%, #0D1316 100%);
+	color: #fff;
+	padding-top: 80px;
+	padding-bottom: 100px;
+	background-position: top;
+	background-size: contain;
+	background-repeat: no-repeat;
+	position: relative;
+}
+.programm-modules-module {
+	border: 1px solid #2e3135;
+	margin-bottom: 30px;
+}
+.programm-modules-module-top {
+	cursor: pointer;
+	position: relative;
+	padding-top: 25px;
+	padding-right: 70px;
+	padding-bottom: 30px;
+	padding-left: 70px;
+	border-bottom: 1px solid #2e3135;
+}
+.programm-modules-module-top__title {
+	pointer-events: none;
+	margin-bottom: 11px;
+	font-weight: 700;
+	font-size: 30px;
+	line-height: 100%;
+	max-width: calc(100% - 100px);
+}
+.programm-modules-module-top__name {
+	pointer-events: none;
+	font-weight: 400;
+	font-size: 22px;
+	line-height: 100%;
+	max-width: calc(100% - 100px);
+}
+.programm-modules-module-top__button {
+	pointer-events: none;
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	right: 50px;
+	height: 32px;
+	width: 32px;
+	background-image: url("../img/programm/angle-down.svg");
+	background-size: contain;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+.programm-modules-module-bottom-summary {
+	padding-top: 48px;
+	padding-left: 70px;
+	padding-bottom: 55px;
+	padding-right: 70px;
+	display: grid;
+	grid-template-columns: 1.3fr .7fr .7fr 1.3fr;
+	gap: 25px;
+	border-bottom: 1px solid #2e3135;
+
+}
+.programm-modules-module-bottom-summary-column__title {
+	margin-bottom: 15px;
+	font-weight: 700;
+	font-size: 20px;
+	line-height: 100%;
+}
+.programm-modules-module-bottom-summary-column:last-child {
+	.programm-modules-module-bottom-summary-column__title {
+		color: #d1c297;
+	}
+}
+
+.programm-modules-module-bottom-summary-column__desc {
+	font-size: 16px;
+	line-height: 145%;
+}
+.programm-modules-module-bottom-plan {
+	padding-top: 50px;
+	padding-right: 70px;
+	padding-bottom: 25px;
+	padding-left: 70px;
+}
+.programm-modules-module-bottom-plan__title {
+	margin-bottom: 21px;
+	font-weight: 700;
+	font-size: 22px;
+	line-height: 100%;
+	color: #d1c297;
+}
+.programm-modules-module-bottom-plan-lessons {
+	counter-reset: plan-lesson;
+}
+.programm-modules-module-bottom-plan-lessons-lesson {
+	margin-bottom: 24px;
+	font-size: 18px;
+	line-height: 145%;
+	counter-increment: plan-lesson;
+	&::before {
+		content: counter(plan-lesson) " Урок. ";
+		font-weight: 700;
+
+	}
+}
+.programm__smoke {
+	pointer-events: none;
+	position: absolute;
+	bottom: 0;
+	height: calc(100%);
+	width: 40%;
+	min-width: 400px;
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: bottom;
+}
+.programm__smoke--left {
+	left: 0;
+	background-image: url(../img/programm/smoke-left.png);
+}
+.programm__smoke--right {
+	right: 0;
+	background-image: url(../img/programm/smoke-right.png);
+}
