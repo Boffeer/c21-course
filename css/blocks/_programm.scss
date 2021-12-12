@@ -103,6 +103,9 @@
 		font-weight: 700;
 
 	}
+	&:last-child {
+		margin-bottom: 0;
+	}
 }
 .programm__smoke {
 	pointer-events: none;
@@ -122,4 +125,86 @@
 .programm__smoke--right {
 	right: 0;
 	background-image: url(../img/programm/smoke-right.png);
+}
+
+@media (max-width: 992px) {
+	.programm {
+		padding-bottom: 50px;
+	}
+	.programm-modules-module-top {
+		padding-top: 16px;
+		padding-left: 20px;
+		padding-right: 20px;
+		padding-bottom: 16px;
+	}
+	.programm-modules-module-top__title {
+		font-size: 22px;
+		margin-bottom: 5px;
+	}
+	.programm-modules-module-top__name {
+		font-size: 18px;
+	}
+	.programm-modules-module-bottom-summary {
+		display: block;
+		padding-top: 16px;
+		padding-left: 20px;
+		padding-right: 20px;
+		padding-bottom: 16px;
+	}
+	.programm-modules-module-bottom-summary-column {
+		margin-bottom: 20px;
+	}
+	.programm-modules-module-bottom-plan {
+		padding-top: 16px;
+		padding-left: 20px;
+		padding-right: 20px;
+		padding-bottom: 16px;
+	}
+	.programm-modules-module-bottom-plan__title {
+		font-size: 20px;
+	}
+	.programm-modules-module-top__button {
+		right: 20px;
+	}
+}
+
+@media (max-width: 575px) {
+	.programm {
+		overflow: hidden;
+		padding-bottom: 40px;
+	}
+	.programm-modules-module {
+		margin-bottom: 10px;
+	}
+	.programm-modules-module-top__name {
+   line-height: 100%;
+    max-width: calc(100% - 40px);
+	}
+	.programm-modules-module-top__button {
+		width: 16px;
+	}
+	programm-modules-module-top__title {
+		font-size: 18px;
+	}
+	.programm-modules-module-top__name {
+		font-size: 14px;
+	}
+
+	.programm-modules-module-bottom-summary-column {
+		margin-bottom: 15px;
+	}
+	.programm-modules-module-bottom-summary-column__title {
+		margin-bottom: 5px;
+		font-size: 16px;
+	}
+	.programm-modules-module-bottom-summary-column__desc {
+		font-size: 14px;
+	}
+	.programm-modules-module-bottom-plan__title {
+		margin-bottom: 5px;
+		font-size: 16px;
+	}
+	.programm-modules-module-bottom-plan-lessons-lesson {
+		font-size: 14px;
+	}
 }

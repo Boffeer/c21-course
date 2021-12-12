@@ -110,27 +110,33 @@
 var lazyLoadInstance = new LazyLoad();
 
 const reviewsSlider = new Swiper('.reviews-slider', {
-    grabCursor: true,
-    slidesPerView: 2,
-    // spaceBetween: 35,
-    effect: 'creative',
-    creativeEffect: {
-      prev: {
-        shadow: true,
-        translate: [0, 0, -400],
-      },
-      next: {
-        translate: ['100%', 0, 0],
-      },
+  grabCursor: true,
+  slidesPerView: 1,
+  // spaceBetween: 35,
+  effect: 'creative',
+  creativeEffect: {
+    prev: {
+      shadow: true,
+      translate: [0, 0, -400],
     },
-    navigation: {
-      nextEl: '.reviews-slider__button-next',
-      prevEl: '.reviews-slider__button-prev',
+    next: {
+      translate: ['100%', 0, 0],
     },
-    pagination: {
-      el: '.reviews-slider__pagination',
-      clickable: true,
+  },
+  navigation: {
+    nextEl: '.reviews-slider__button-next',
+    prevEl: '.reviews-slider__button-prev',
+  },
+  pagination: {
+    el: '.reviews-slider__pagination',
+    clickable: true,
+  },
+  breakpoints: {
+    // when window width is >= 320px
+    1200: {
+      slidesPerView: 2,
     }
+  }
 });
 
 poppa({

@@ -1,11 +1,3 @@
-# VS CODE HTML and SASS bolierpalte
+# Tasks
 
-## Libs
-[jQuery]()
-[jquery.fancybox]()
-[normalize]()
-[modality]()
-[jquery.inputmask]()
-[timer.jquery]()
-[aos]()
-[Owl]()
+- [] Сделай фиксед шапку

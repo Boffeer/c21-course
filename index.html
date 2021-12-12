@@ -3,6 +3,7 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="format-detection" content="telephone=no" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<meta name="yandex-verification" content="" />
 		<meta name="google-site-verification" content="" />
@@ -134,7 +135,7 @@
 					<h2 class="who__title section__title section__title--centered">кто вы?</h2>
 					<div class="who-tabslist">
 						<div class="who-tablist-controls">
-							<button class="who-tablist-controls__button" data-tab="1">Руководитель отдела продаж</button>
+							<button class="button who-tablist-controls__button" data-tab="1">Руководитель отдела продаж</button>
 							<button class="button who-tablist-controls__button" data-tab="2">Риелтор</button>
 							<button class="button who-tablist-controls__button" data-tab="3">Руководитель АН</button>
 							<button class="button who-tablist-controls__button" data-tab="4">Случайный прохожий</bu>
@@ -526,7 +527,7 @@
 			</section>
 
 			<section class="mentors lazy" data-bg="./img/mentors/mentors-bg.png">
-				<div class="container">
+				<div class="container container--mentors">
 					<h2 class="mentors__title section__title">Наставники курса</h2>
 					<div class="metnors-cards">
 						<article class="mentors-cards-mentor">
@@ -632,7 +633,7 @@
 											</span>
 										</p>
 								 </li>
-								 <li class="bundles-table-bundle-stats-stat">
+								 <li class="bundles-table-bundle-stats-stat bundles-table-bundle-stats-stat--no">
 									<div class="bundles-table-bundle-stats-stat__name-wrap">
 									 <h4 class="bundles-table-bundle-stats-stat__name">Обратная связь по практическим заданиям</h4>
 									 </div>
@@ -640,7 +641,7 @@
 										 <img src="./img/bundles/no.svg" alt="" class="bundles-table-bundle-stats-stat__desc-icon">
 										</p>
 								 </li>
-								 <li class="bundles-table-bundle-stats-stat">
+								 <li class="bundles-table-bundle-stats-stat bundles-table-bundle-stats-stat--no">
 									<div class="bundles-table-bundle-stats-stat__name-wrap">
 									 <h4 class="bundles-table-bundle-stats-stat__name">Коучинговые вебинары, 10 часов в месяц</h4>
 									 </div>
@@ -689,7 +690,7 @@
 										 <img src="./img/bundles/yes.svg" alt="" class="bundles-table-bundle-stats-stat__desc-icon">
 										</p>
 								 </li>
-								 <li class="bundles-table-bundle-stats-stat">
+								 <li class="bundles-table-bundle-stats-stat bundles-table-bundle-stats-stat--no">
 									<div class="bundles-table-bundle-stats-stat__name-wrap">
 									 <h4 class="bundles-table-bundle-stats-stat__name">Коучинговые вебинары, 10 часов в месяц</h4>
 									 </div>
@@ -815,8 +816,8 @@
 							</article>
 						</div>
 						<div class="reviews-slider__nav-wrap">
-							<div class="swiper-pagination reviews-slider__pagination"></div>
 							<div class="swiper-button-prev reviews-slider__button-prev"></div>
+							<div class="swiper-pagination reviews-slider__pagination"></div>
 							<div class="swiper-button-next reviews-slider__button-next"></div>
 						</div>
 					</div>
@@ -825,7 +826,7 @@
 
 			<section class="why">
 				<div class="why__image-top"></div>
-				<div class="container">
+				<div class="container container--why">
 					<h2 class="why__title section__title">Почему наш формат приводит к результатам: </h2>
 					<ul class="why-cards">
 						<li class="why-cards-card">
@@ -904,7 +905,7 @@
 			</section>
 
 			<section class="refund">
-				<div class="container">
+				<div class="container container--refund">
 					<div class="refund__inner">
 						<h2 class="refund__title">Если после первого модуля вам что-то не понравится, то мы вернем деньги!</h2>
 						<a href="#" class="button button--primary refund__button">выбрать тариф</a>
@@ -921,7 +922,10 @@
 						<img src="./img/question/question-hero.png" alt="Если вам что-то непонятно, оставьте заявку, и мы ответим на все интересующие вас вопросы" class="question__img">
 					</div>
 					<div class="question__text">
-						<h2 class="question__title">Худший вопрос тот, который так и не был задан.</h2>
+						<h2 class="question__title">
+							Худший вопрос тот, который так и не <br>
+							был задан.
+						</h2>
 						<p class="question__desc">
 							Если вам что-то непонятно, оставьте <br>
 							заявку, и мы ответим на все <br>

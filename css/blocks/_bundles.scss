@@ -144,3 +144,106 @@
 		border-bottom-color: #1f2a32;
 	}
 }
+
+@media (max-width: 1199px) {
+	.bundles {
+		margin-top: 0;
+		padding-top: 50px;
+		padding-bottom: 50px;
+	}
+	.bundles-table {
+		grid-template-columns: repeat(3, 1fr);
+		align-items: start;
+	}
+	.bundles-table::before {
+		content: initial;
+	}
+	.bundles-table-bundle {
+		padding-top: 25px;
+		padding-right: 0;
+		padding-bottom: 27px;
+		padding-left: 0;
+	}
+	.bundles-table-bundle__name {
+		margin-bottom: 0;
+		padding-bottom: 26px;
+		border-bottom: 1px solid rgba(255,255,255,0.1);
+		font-size: 18px;
+	}
+	.bundles-table-bundle-stats-stat {
+		margin-bottom: 0;
+		padding-top: 24px;
+		padding-right: 15px;
+		padding-bottom: 24px;
+		padding-left: 15px;
+		border-bottom: 1px solid rgba(255,255,255,0.1);
+	}
+	.bundles-table-bundle-stats-stat__name {
+		margin-bottom: 5px;
+		border-bottom: none;
+		max-width: 100%;
+		font-weight: 400;
+		font-size: 16px;
+		line-height: 140%;
+		text-align: center;
+	}
+	.bundles-table-bundle-stats-stat__desc {
+		margin-top: 0;
+	}
+	.bundles-table-bundle-stats-stat__desc-icon {
+		display: none;
+	}
+	.bundles-table-bundle-stats-stat__text {
+		font-size: 18px;
+	}
+	.bundles-table-bundle-stats-stat__name-wrap {
+		position: static;
+		display: block;
+		border-bottom: none;
+		padding-bottom: 0;
+	}
+	.bundles-table-bundle-stats-stat--no {
+		display: none;
+	}
+	.bundles-table-bundle-price__buy {
+		max-width: calc(100% - 28px);
+		margin-left: auto;
+		margin-bottom: 10px;
+		margin-right: auto;
+		font-size: 14px;
+	}
+	.bundles-table-bundle-price {
+		margin-bottom: 15px;
+	}
+	.bundles-table-bundle-price__title {
+		font-size: 16px;
+		margin-bottom: 0;
+	}
+	.bundles-table-bundle-price__cost {
+		font-size: 22px;
+	}
+	.bundles-table-bundle__more {
+		font-size: 14px;
+	}
+}
+
+@media (max-width: 767px) {
+	.bundles__title {
+		font-size: 22px;
+		margin-bottom: 24px;
+	}
+	.bundles-table {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		gap: 0;
+	}
+	.bundles-table-bundle {
+		max-width: 100%;
+		width: 100%;
+		margin-bottom: 20px;
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+}

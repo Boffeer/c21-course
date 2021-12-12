@@ -1,3 +1,21 @@
 .container {
 	padding: 0 calc(100% - (50% + 585px));
 }
+
+@media (max-width: 1200px) {
+
+}
+
+@media (max-width: 1199px) {
+	.container {
+		padding-right: 15px;
+		padding-left: 15px;
+	}
+}
+
+@media (max-width: 575px) {
+	.container {
+		padding-right: 10px;
+		padding-left: 10px;
+	}
+}

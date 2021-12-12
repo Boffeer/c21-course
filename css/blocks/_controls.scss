@@ -78,11 +78,11 @@
 }
 
 .input {
-	padding: 14px 26px;
+	padding: 26px 20px;
 	background: linear-gradient(315deg, rgba(0, 0, 0, 0.6) 0%, rgba(255, 255, 255, 0) 100%), #F0F1F5;
 	background-blend-mode: soft-light, normal;
 	box-shadow: inset -1.87227px -1.87227px 1.87227px rgba(255, 255, 255, 0.7), inset 2.8084px 2.8084px 1.87227px rgba(174, 174, 192, 0.2);
-	border-radius: 7.48907px;
+	border-radius: 8px;
 	width: 100%;
 }
 
@@ -107,4 +107,11 @@
 	background-color: rgba(255, 255, 255, .1);
 	right: 90px;
 	top: 90px;
+}
+
+@media (max-width: 992px) {
+	.poppa__closer {
+		top: 10px;
+		right: 10px;
+	}
 }

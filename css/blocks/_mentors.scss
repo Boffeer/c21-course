@@ -8,6 +8,10 @@
 	background-repeat: no-repeat;
 	position: relative;
 }
+.container--mentors {
+	position: relative;
+	z-index: 2;
+}
 .mentors__title {
 	color: #fff;
 	margin-bottom: 50px;
@@ -126,4 +130,65 @@
 	top: 285px;
 	right: 0;
 	background-image: url(../img/mentors/butterfly.png);
+}
+
+@media (max-width: 1199px) {
+	.mentors {
+		overflow: hidden;
+	}
+	.mentors-cards-mentor__img {
+		height: auto;
+		margin-bottom: 20px;
+	}
+}
+
+@media (max-width: 992px) {
+	.mentors {
+		padding-top: 50px;
+	}
+	.metnors-cards {
+		grid-template-columns: repeat(2, 1fr);
+	}
+	.mentors-cards-mentor {
+		margin-bottom: 15px;
+	}
+	.mentors-cards-mentor__profile {
+		font-size: 18px;
+		margin-bottom: 12px;
+	}
+	.mentors-cards-mentor-bullets {
+		margin-bottom: 10px;
+	}
+	.mentors-cards-mentor-bullets-bullet {
+		font-size: 14px;
+	}
+}
+
+@media (max-width: 767px) {
+	.mentors {
+		padding-bottom: 35px;
+	}
+	.mentors__title {
+		font-size: 22px;
+		margin-bottom: 28px;
+	}
+	.metnors-cards {
+		row-gap: 0;
+	}
+	.mentors-cards-mentor__name,
+	.mentors-cards-mentor__occupy {
+		font-size: 18px;
+	}
+	.mentors-cards-mentor-bullets-bullet {
+		margin-bottom: 12px;
+	}
+	.mentors-cards-mentor__button {
+		font-size: 14px;
+	}
+}
+
+@media (max-width: 575px) {
+	.metnors-cards {
+		display: block;
+	}
 }

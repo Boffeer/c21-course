@@ -2,6 +2,11 @@
 	margin-top: -254px;
 	padding-bottom: 40px;
 }
+.container--why {
+	margin-top: -5px;
+	padding-top: 5px;
+	background-color: #fff;
+}
 .why__image-top {
 	width: 100%;
 	height: 254px;
@@ -9,9 +14,10 @@
 	background-repeat: no-repeat;
 	background-image: url(../img/why/why-top.png);
 	background-position: bottom;
+	pointer-events: none;
 }
 .why__title {
-	margin-bottom: 130px;
+	margin-bottom: 80px;
 	font-weight: 700;
 	font-size: 38px;
 	line-height: 140%;
@@ -80,5 +86,36 @@
 		.why-cards-card__img {
 			margin-top: 30px;
 		}
+	}
+}
+
+@media (max-width: 1199px) {
+	.why__title {
+		margin-bottom: 20px;
+	}
+}
+
+@media (max-width: 992px) {
+	.why-cards {
+		grid-template-columns: repeat(2, 1fr);
+	}
+}
+
+@media (max-width: 767px) {
+	.why__title {
+		font-size: 22px;
+		margin-bottom: 8px;
+	}
+}
+
+@media (max-width: 575px) {
+	.why {
+		padding-bottom: 30px;
+	}
+	.container--why {
+		padding-top: 30px;
+	}
+	.why-cards {
+		display: block;
 	}
 }
