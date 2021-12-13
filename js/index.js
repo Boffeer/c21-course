@@ -31,26 +31,6 @@
   //   });
   // });
 
-  /**
-   * TABS
-   */
-  // $(".cases-showcase-tabbar__button").each(function () {
-  //   $(this).on("click", function () {
-  //     $(".cases-showcase-tabbar__button").removeClass(
-  //       "cases-showcase-tabbar__button--current"
-  //     );
-  //     $(this).addClass("cases-showcase-tabbar__button--current");
-  //     var target = $(this).attr("data-target");
-
-  //     $(".cases-showcase-tabs-tab").hide();
-  //     $('.cases-showcase-tabs-tab[data-target="' + target + '"]').show();
-
-  //     $("html, body").animate(
-  //       { scrollTop: $(".cases").offset().top - 40 },
-  //       800
-  //     );
-  //   });
-  // });
 
   /**
    * POPUPS
@@ -143,3 +123,35 @@ poppa({
   pop: '.popups-callback',
   clickTrigger: ['.question__button', '.header-contacts__button'],
 })
+
+
+/**
+ * TABS
+ */
+const whoTabButtons = [...document.querySelectorAll('.who-tablist-controls__button')];
+const whoTabs = [...document.querySelectorAll('.who-tablist-tabs-tab')];
+const BOtabActiveClass = 'tab-active';
+const BOtabAttr = 'data-tab';
+
+if (whoTabButtons.length > 0 && whoTabs.length > 0) {
+  whoTabButtons.forEach(button => {
+    button.addEventListener('click', function() {
+      whoTabButtons.forEach(tabButton => {
+        tabButton.classList.remove(BOtabActiveClass);
+      });
+
+      this.classList.add(BOtabActiveClass);
+      const tabButtonNumber = this.getAttribute(BOtabAttr);
+      whoTabs.forEach(tab => {
+        const tabNumber = tab.getAttribute(BOtabAttr);
+
+        tab.classList.remove(BOtabActiveClass);
+        if (tabButtonNumber === tabNumber) {
+          tab.classList.add(BOtabActiveClass);
+        }
+      })
+    })
+  });
+}
+
+// /TABS

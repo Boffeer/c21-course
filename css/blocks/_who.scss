@@ -21,6 +21,7 @@
 	text-transform: uppercase;
 	color: #fff;
 }
+
 .who-tablist-controls {
 	margin-bottom: 60px;
 	display: grid;
@@ -42,17 +43,21 @@
 	line-height: 140%;
 	text-align: center;
 	letter-spacing: 0.05em;
-	&--current {
-		font-weight: 700;
-		color: #11192e;
-		background: #D1C297;
-	}
 }
+.who-tablist-controls__button.tab-active {
+	font-weight: 700;
+	color: #11192e;
+	background: #D1C297;
+}
+
 .who-tablist-tabs-tab {
-	display: flex;
+	display: none;
 	align-items: flex-start;
 	justify-content: center;
 	padding-bottom: 20px;
+}
+.who-tablist-tabs-tab.tab-active {
+	display: flex;
 }
 
 .who-tablist-tabs-tab-before,

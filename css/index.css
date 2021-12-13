@@ -917,16 +917,14 @@ body {
   letter-spacing: 0.05em;
 }
 
-.who-tablist-controls__button--current {
+.who-tablist-controls__button.tab-active {
   font-weight: 700;
   color: #11192e;
   background: #D1C297;
 }
 
 .who-tablist-tabs-tab {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: none;
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
@@ -934,6 +932,12 @@ body {
       -ms-flex-pack: center;
           justify-content: center;
   padding-bottom: 20px;
+}
+
+.who-tablist-tabs-tab.tab-active {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .who-tablist-tabs-tab-before,
