@@ -20,6 +20,7 @@
 	padding-right: 70px;
 	padding-bottom: 30px;
 	padding-left: 70px;
+	// border-bottom: none;
 	border-bottom: 1px solid #2e3135;
 }
 .programm-modules-module-top__title {
@@ -49,6 +50,7 @@
 	background-size: contain;
 	background-position: center;
 	background-repeat: no-repeat;
+	transition: all .3s;
 }
 .programm-modules-module-bottom-summary {
 	padding-top: 48px;
@@ -94,14 +96,17 @@
 	counter-reset: plan-lesson;
 }
 .programm-modules-module-bottom-plan-lessons-lesson {
+	position: relative;
 	margin-bottom: 24px;
+	padding-left: 95px;
 	font-size: 18px;
 	line-height: 145%;
 	counter-increment: plan-lesson;
 	&::before {
 		content: counter(plan-lesson) " Урок. ";
+		position: absolute;
+		left: 0;
 		font-weight: 700;
-
 	}
 	&:last-child {
 		margin-bottom: 0;
@@ -125,6 +130,17 @@
 .programm__smoke--right {
 	right: 0;
 	background-image: url(../img/programm/smoke-right.png);
+}
+
+.programm-modules-module-bottom {
+	transition: all .45s ease-in;
+	overflow: hidden;
+}
+.programm-modules-module.opened .programm-modules-module-top {
+	// border-bottom: 1px solid #2e3135;
+}
+.programm-modules-module.opened .programm-modules-module-top__button {
+	transform: rotate(180deg) translateY(50%);
 }
 
 @media (max-width: 992px) {
@@ -166,6 +182,12 @@
 	.programm-modules-module-top__button {
 		right: 20px;
 	}
+	.programm-modules-module-bottom-plan-lessons-lesson {
+		padding-left: 0;
+		&::before {
+			position: static;
+		}
+	}
 }
 
 @media (max-width: 575px) {
@@ -183,7 +205,7 @@
 	.programm-modules-module-top__button {
 		width: 16px;
 	}
-	programm-modules-module-top__title {
+	.programm-modules-module-top__title {
 		font-size: 18px;
 	}
 	.programm-modules-module-top__name {

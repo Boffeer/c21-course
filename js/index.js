@@ -87,71 +87,108 @@
 //   });
 // });
 
-var lazyLoadInstance = new LazyLoad();
+window.addEventListener('DOMContentLoaded', () => {
+  var lazyLoadInstance = new LazyLoad();
 
-const reviewsSlider = new Swiper('.reviews-slider', {
-  grabCursor: true,
-  slidesPerView: 1,
-  // spaceBetween: 35,
-  effect: 'creative',
-  creativeEffect: {
-    prev: {
-      shadow: true,
-      translate: [0, 0, -400],
+  const reviewsSlider = new Swiper('.reviews-slider', {
+    grabCursor: true,
+    slidesPerView: 1,
+    // spaceBetween: 35,
+    effect: 'creative',
+    creativeEffect: {
+      prev: {
+        shadow: true,
+        translate: [0, 0, -400],
+      },
+      next: {
+        translate: ['100%', 0, 0],
+      },
     },
-    next: {
-      translate: ['100%', 0, 0],
+    navigation: {
+      nextEl: '.reviews-slider__button-next',
+      prevEl: '.reviews-slider__button-prev',
     },
-  },
-  navigation: {
-    nextEl: '.reviews-slider__button-next',
-    prevEl: '.reviews-slider__button-prev',
-  },
-  pagination: {
-    el: '.reviews-slider__pagination',
-    clickable: true,
-  },
-  breakpoints: {
-    // when window width is >= 320px
-    1200: {
-      slidesPerView: 2,
+    pagination: {
+      el: '.reviews-slider__pagination',
+      clickable: true,
+    },
+    breakpoints: {
+      // when window width is >= 320px
+      1200: {
+        slidesPerView: 2,
+      }
+    }
+  });
+
+  poppa({
+    pop: '.popups-callback',
+    clickTrigger: ['.question__button', '.header-contacts__button'],
+  })
+
+
+  /**
+   * .who TABS
+   */
+  const whoTabButtons = [...document.querySelectorAll('.who-tablist-controls__button')];
+  const whoTabs = [...document.querySelectorAll('.who-tablist-tabs-tab')];
+  const BOtabActiveClass = 'tab-active';
+  const BOtabAttr = 'data-tab';
+
+  if (whoTabButtons.length > 0 && whoTabs.length > 0) {
+    whoTabButtons.forEach(button => {
+      button.addEventListener('click', function() {
+        whoTabButtons.forEach(tabButton => {
+          tabButton.classList.remove(BOtabActiveClass);
+        });
+
+        this.classList.add(BOtabActiveClass);
+        const tabButtonNumber = this.getAttribute(BOtabAttr);
+        whoTabs.forEach(tab => {
+          const tabNumber = tab.getAttribute(BOtabAttr);
+
+          tab.classList.remove(BOtabActiveClass);
+          if (tabButtonNumber === tabNumber) {
+            tab.classList.add(BOtabActiveClass);
+          }
+        })
+      })
+    });
+  }
+
+  // / .whoTABS
+
+
+  /**
+   * .programm DROPDOWNS
+   */
+  const dropdowns = [...document.querySelectorAll('.programm-modules-module-top')];
+
+  const dropdownOpenedClass = 'opened';
+
+  function toggleDropdown(dropdownTop, dropdownBottom, dropdownOpenedClass, dropdownBottomHeight) {
+    if (dropdownTop.parentElement.classList.value.includes(dropdownOpenedClass)) {
+      dropdownBottom.style.maxHeight = '0';
+      dropdownTop.parentElement.classList.remove(dropdownOpenedClass);
+    } else {
+      dropdownBottom.style.maxHeight = `${dropdownBottomHeight + 20}px`;
+      dropdownTop.parentElement.classList.add(dropdownOpenedClass);
     }
   }
-});
 
-poppa({
-  pop: '.popups-callback',
-  clickTrigger: ['.question__button', '.header-contacts__button'],
-})
+  dropdowns.forEach((dropdown, index) => {
+    const currentBottom = dropdown.parentElement.querySelector('.programm-modules-module-bottom');
+    const currentBottomHeight = currentBottom.clientHeight;
+    dropdown.addEventListener("click", function() {
+      toggleDropdown(this, currentBottom, dropdownOpenedClass, currentBottomHeight);
+    });
 
-
-/**
- * TABS
- */
-const whoTabButtons = [...document.querySelectorAll('.who-tablist-controls__button')];
-const whoTabs = [...document.querySelectorAll('.who-tablist-tabs-tab')];
-const BOtabActiveClass = 'tab-active';
-const BOtabAttr = 'data-tab';
-
-if (whoTabButtons.length > 0 && whoTabs.length > 0) {
-  whoTabButtons.forEach(button => {
-    button.addEventListener('click', function() {
-      whoTabButtons.forEach(tabButton => {
-        tabButton.classList.remove(BOtabActiveClass);
-      });
-
-      this.classList.add(BOtabActiveClass);
-      const tabButtonNumber = this.getAttribute(BOtabAttr);
-      whoTabs.forEach(tab => {
-        const tabNumber = tab.getAttribute(BOtabAttr);
-
-        tab.classList.remove(BOtabActiveClass);
-        if (tabButtonNumber === tabNumber) {
-          tab.classList.add(BOtabActiveClass);
-        }
-      })
-    })
+    setTimeout(() => {
+      dropdown.click();
+      if (index > 0) {
+        toggleDropdown(dropdown, currentBottom, dropdownOpenedClass, currentBottomHeight);
+      }
+    }, 200)
   });
-}
 
-// /TABS
+  // / .programm DROPDOWNS
+});
