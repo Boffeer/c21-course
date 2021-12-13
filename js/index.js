@@ -1,22 +1,4 @@
 // $(document).ready(function () {
-  // AOS.init();
-
-  /**
-  //  * Sticky Header
-  //  */
-  // let isWindowScrolled = $(this).scrollTop() > 100;
-  // let isStickyHeaderAllowed = window.innerWidth >= 768;
-  // function stickyHeader() {
-  //   if ($(this).scrollTop() > 100 && window.innerWidth >= 768) {
-  //     $(".header-menu").addClass("header-menu--scrolled");
-  //   } else {
-  //     $(".header-menu").removeClass("header-menu--scrolled");
-  //   }
-  // }
-  // $(window).on("scroll", function () {
-  //   stickyHeader();
-  // });
-  // stickyHeader();
 
   // MASK
   // $("input[name=tel").inputmask("+7 (999) 999-99-99");
@@ -32,19 +14,6 @@
   // });
 
 
-  /**
-   * POPUPS
-   */
-//   modality({
-//     pop: ".form--header-menu-callback",
-//     clickTrigger: ".header-menu__callback",
-//     popCloserType: "inner",
-//   });
-//   modality({
-//     pop: ".pop-thanks",
-//     clickTrigger: ".pop-thanks",
-//     popCloserType: "inner",
-//   });
 
 //   /**
 //    * AJAX SEND
@@ -90,6 +59,65 @@
 window.addEventListener('DOMContentLoaded', () => {
   var lazyLoadInstance = new LazyLoad();
 
+  const header = document.querySelector('.header');
+
+  /**
+    * Sticky Header
+    */
+   const isWindowScrolled = () => window.scrollY > 100;
+   const isStickyHeaderAllowed = () => window.innerWidth >= 768;
+   const headerScrolledClass = 'header--scrolled';
+   let lastScrollY = 0;
+
+   function stickyHeader() {
+      if (isWindowScrolled()) {
+        header.classList.add(headerScrolledClass);
+      } else {
+        header.classList.remove(headerScrolledClass);
+      }
+
+      if (window.scrollY > lastScrollY) {
+        header.classList.add('header--hidden');
+      } else {
+        header.classList.remove('header--hidden');
+      }
+
+      setTimeout(() => {
+        lastScrollY = window.scrollY;
+      }, 100)
+   }
+   window.addEventListener('scroll', () => {
+     stickyHeader();
+   })
+   stickyHeader();
+   // /sticky header
+
+
+
+  /**
+   * BURGER
+   */
+  const headerOpenedClass = 'header--opened';
+  const headerBurger = document.querySelector('.header__burger')
+  headerBurger.addEventListener('click', function() {
+
+    if (header.classList.value.includes(headerOpenedClass)) {
+      header.classList.remove(headerOpenedClass);
+      document.querySelector('html').classList.remove('poppa-block-scrolling')
+    } else {
+      header.classList.add(headerOpenedClass);
+      document.querySelector('html').classList.add('poppa-block-scrolling')
+    }
+  });
+  // /BURFER
+
+  // Close burger on click beyond popup
+  window.addEventListener('click', function(event) {
+    if (event.target === document.querySelector('.header__menu-wrap')) {
+      headerBurger.click();
+    }
+  });
+
   const reviewsSlider = new Swiper('.reviews-slider', {
     grabCursor: true,
     slidesPerView: 1,
@@ -123,7 +151,7 @@ window.addEventListener('DOMContentLoaded', () => {
   poppa({
     pop: '.popups-callback',
     clickTrigger: ['.question__button', '.header-contacts__button'],
-  })
+  });
 
 
   /**
@@ -154,7 +182,6 @@ window.addEventListener('DOMContentLoaded', () => {
       })
     });
   }
-
   // / .whoTABS
 
 
@@ -162,7 +189,6 @@ window.addEventListener('DOMContentLoaded', () => {
    * .programm DROPDOWNS
    */
   const dropdowns = [...document.querySelectorAll('.programm-modules-module-top')];
-
   const dropdownOpenedClass = 'opened';
 
   function toggleDropdown(dropdownTop, dropdownBottom, dropdownOpenedClass, dropdownBottomHeight) {
