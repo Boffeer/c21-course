@@ -217,4 +217,42 @@ window.addEventListener('DOMContentLoaded', () => {
   });
 
   // / .programm DROPDOWNS
+
+
+  /**
+   * .reviews LAZY YT VIDEOS
+   */
+	const reviews = document.querySelectorAll('.reviews-slider-slide');
+
+	reviews.forEach((review, index) => {
+		let ytId = review.getAttribute('data-yt-id');
+		let ytThumbUrl = `https://i.ytimg.com/vi/${ytId}/hq720.jpg`;
+		let ytVideoUrl = `https://www.youtube.com/embed/${ytId}/?autoplay=1&mute=1`;
+		// let ytVideoUrl = `https://www.youtube.com/watch?v=${ytId}`;
+
+		let thumb = review.querySelector('.reviews-slider-slide__thumb');
+		let video = review.querySelector('.reviews-slider-slide__video');
+		let play = review.querySelector('.reviews-slider-slide__play');
+
+		video.setAttribute('data-src', ytVideoUrl);
+		thumb.src = ytThumbUrl;
+
+		let videoClass = `js_articles__video--${index}`;
+		let playClass = `js_articles__play--${index}`;
+
+		let videoFirstClass = video.classList[0];
+		video.classList.remove(videoFirstClass)
+
+		video.classList.add(videoClass)
+		video.classList.add(videoFirstClass)
+		play.classList.add(playClass)
+
+    play.addEventListener('click', function() {
+      video.src = video.getAttribute('data-src');
+      thumb.style.display = 'none';
+      video.style.display = 'block';
+      this.remove();
+    });
+	})
+
 });

@@ -738,6 +738,7 @@ body {
 }
 
 .hero-bullets-list-bullet {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -756,6 +757,19 @@ body {
   width: 100%;
 }
 
+.hero-bullets-list-bullet::after {
+  content: "";
+  position: absolute;
+  right: -25px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  display: block;
+  width: 1px;
+  height: 75px;
+  background: rgba(255, 255, 255, 0.3);
+}
+
 .hero-bullets-list-bullet:nth-child(1) .hero-bullets-list-bullet-icon__img {
   margin-left: -12px;
 }
@@ -770,6 +784,10 @@ body {
 
 .hero-bullets-list-bullet:nth-child(4) .hero-bullets-list-bullet-icon__img {
   margin-left: -10px;
+}
+
+.hero-bullets-list-bullet:nth-child(4)::after {
+  display: none;
 }
 
 .hero-bullets-list-bullet__title {
@@ -855,6 +873,12 @@ body {
   }
 }
 
+@media (max-width: 1199px) and (min-width: 992px) {
+  .hero-bullets-list-bullet::after {
+    display: none;
+  }
+}
+
 @media (max-width: 992px) {
   .hero-offer {
     margin-bottom: 0;
@@ -905,6 +929,12 @@ body {
   .hero-bullets-list-bullet:nth-child(4) .hero-bullets-list-bullet-icon__img {
     left: -11px;
   }
+  .hero-bullets-list-bullet::after {
+    right: -55px;
+  }
+  .hero-bullets-list-bullet:nth-child(2n)::after {
+    display: none;
+  }
 }
 
 @media (max-width: 767px) {
@@ -952,9 +982,32 @@ body {
     margin-bottom: -40px;
   }
   .hero-bullets-list {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+  }
+  .hero-bullets-list-bullet-icon {
+    margin-bottom: 30px;
+  }
+  .hero-bullets-list-bullet::after {
+    position: static;
+    margin-left: auto;
+    margin-right: auto;
+    width: 75px;
+    height: 1px;
+  }
+  .hero-bullets-list-bullet:nth-child(2n)::after {
+    display: block;
+  }
+  .hero-bullets-list-bullet:last-child::after {
+    display: none;
   }
 }
 
@@ -2325,6 +2378,11 @@ body {
   border-radius: 8px;
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+.reviews-slider-slide__video {
+  display: none;
+  background-color: #000;
 }
 
 .reviews-slider__pagination .swiper-pagination-bullet {

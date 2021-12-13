@@ -58,6 +58,10 @@
 	border-radius: 8px;
 	object-fit: cover;
 }
+.reviews-slider-slide__video {
+	display: none;
+	background-color: #000;
+}
 .reviews-slider__pagination {
 	.swiper-pagination-bullet {
 		width: 12px;
